@@ -11,6 +11,7 @@ pom.xml
 .lein-plugins/
 .repl
 .nrepl-port
+/node_modules
 
 # Local Netlify folder
 .netlify
