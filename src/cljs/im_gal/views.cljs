@@ -10,7 +10,7 @@
 (defn home-panel []
   (let [name (re-frame/subscribe [::subs/name])]
     [:div
-     [:h1 (str "Hello from " @name ". This is the Home Page.")]
+     [:h1 (str "Hello from " @name ". This is thafsdfsdfsfe Home Page.")]
 
      [:div
       [:a {:href "#/about"}
