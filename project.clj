@@ -9,12 +9,13 @@
 
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/clojurescript "1.10.520"]
-                 [org.clojure/core.async  "0.4.500"]]
+                 [org.clojure/core.async  "0.4.500"]
+               ]
 
   :plugins [[lein-figwheel "0.5.19"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
 
-  :source-paths ["src" "target"]
+  :source-paths ["src" "target" ]
   :aliases {"fig:build" ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]}
 
   :cljsbuild {:builds
@@ -92,7 +93,7 @@
                                   [figwheel-sidecar "0.5.19"]
                                   [com.bhauman/figwheel-main "0.2.3"]]
                    ;; need to add dev source path here to get user.clj loaded
-                   :source-paths ["src" "dev"]
+                   :source-paths ["src" "dev" "resources"]
                    ;; need to add the compliled assets to the :clean-targets
                    :clean-targets ^{:protect false} ["resources/public/js/compiled"
                                                      :target-path]}})
