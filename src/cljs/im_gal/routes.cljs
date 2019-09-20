@@ -6,8 +6,7 @@
    [goog.events :as gevents]
    [goog.history.EventType :as EventType]
    [re-frame.core :as re-frame]
-   [im-gal.events :as events]
-   ))
+   [im-gal.events :as events]))
 
 (defn hook-browser-navigation! []
   (doto (History.)
@@ -22,12 +21,13 @@
   ;; --------------------
   ;; define routes here
   (defroute "/" []
-    (re-frame/dispatch [::events/set-active-panel :home-panel])
-    )
+    (re-frame/dispatch [::events/set-active-panel :home-panel]))
 
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
 
   ;; --------------------
+
+
   (hook-browser-navigation!))

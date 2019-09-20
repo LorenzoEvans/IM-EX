@@ -1,11 +1,11 @@
 (ns im-gal.views
   (:require
    [re-frame.core :as re-frame]
-   [im-gal.subs :as subs]
-   ))
+   [im-gal.subs :as subs]))
 
 
 ;; home
+
 
 (defn home-panel []
   (let [name (re-frame/subscribe [::subs/name])]
@@ -14,11 +14,11 @@
 
      [:div
       [:a {:href "#/about"}
-       "go to About Page"]]
-     ]))
+       "go to About Page"]]]))
 
 
 ;; about
+
 
 (defn about-panel []
   [:div
@@ -30,6 +30,7 @@
 
 
 ;; main
+
 
 (defn- panels [panel-name]
   (case panel-name
