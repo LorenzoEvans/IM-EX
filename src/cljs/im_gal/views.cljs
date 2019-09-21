@@ -1,22 +1,26 @@
 (ns im-gal.views
   (:require
    [re-frame.core :as re-frame]
-   [im-gal.subs :as subs]))
+   [im-gal.subs :as subs]
+   [herb.core :as herb :refer [<class]]))
 
 
 ;; home
 
+(defn example-style []
+  {:background-color "#FFF9999"
+   :height "50px"
+   :width "40%"})
 
 (defn home-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div
-     [:h1 (str "Hello from " @name ". This is thafsdfsdfsfe Home Page.")]
+    [:div {:class (<class example-style)}
+     [:h1 "This is thafsdfsdfsfe Home Page."]
 
-     [:div
+     [:div 
       [:a {:href "/about"}
        "go to About Page"]
       [:a {:href "/contact"}
-       "go to Contact Page"]]]))
+       "go to Contact Page"]]])
 
 
 ;; about
