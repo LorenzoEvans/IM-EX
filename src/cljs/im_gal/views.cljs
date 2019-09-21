@@ -2,33 +2,34 @@
   (:require
    [re-frame.core :as re-frame]
    [im-gal.subs :as subs]
-   [herb.core :as herb :refer [<class]]))
+   [herb.core :as herb :refer [<class]]
+   [im-gal.layout :as layout :refer [home]]))
 
 
 ;; home
 
 
-(defn example-style []
-  {:background-color "#FFF9999"
-   :height "50px"
-   :width "10%"})
+; (defn example-style []
+;   {:background-color "#FFF9999"
+;    :height "50px"
+;    :width "10%"})
 
-(defn home-panel []
-  [:div {:class (<class example-style)}
-   [:h1 "This is thafsdfsdfsfe Home Page."]
+; (defn home-panel []
+;   [:div {:class (<class example-style)}
+;    [:h1 "This is thafsdfsdfsfe Home Page."]
 
-   [:div
-    [:a {:href "/about"}
-     "go to About Page"]
-    [:a {:href "/contact"}
-     "go to Contact Page"]]])
+;    [:div
+;     [:a {:href "/about"}
+;      "go to About Page"]
+;     [:a {:href "/contact"}
+;      "go to Contact Page"]]])
 
 
 ;; about
 
 
 (defn about-panel []
-  [:div
+  [:div 
    [:h1 "This is the About Page."]
 
    [:div
@@ -46,7 +47,7 @@
 
 (defn- panels [panel-name]
   (case panel-name
-    :home-panel [home-panel]
+    :home-panel [home]
     :about-panel [about-panel]
     :contact-panel [contact-panel]
     [:div]))
