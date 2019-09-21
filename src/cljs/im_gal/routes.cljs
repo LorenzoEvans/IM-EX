@@ -9,13 +9,10 @@
    [im-gal.events :as events]
    [pushy.core :as pushy]))
 
-(defn hook-browser-navigation! []
-  (doto (History.)
-    (gevents/listen
-     EventType/NAVIGATE
-     (fn [event]
-       (pushy/start! (pushy/pushy secretary/dispatch! (.-token event)))))
-    (.setEnabled true)))
+(defn hook-routes []
+  (def history (pushy/pushy secretary/dispatch! (fn [x] (when (secretary/locate-route x) x))))
+  (pushy/start! history))
+  
 
 (defn app-routes []
   (secretary/set-config! :prefix "/")
@@ -29,9 +26,5 @@
 
   (defroute "/contact" []
     (re-frame/dispatch [::events/set-active-panel :contact-panel]))
-
-
-  ;; --------------------
-
-
-  (hook-browser-navigation!))
+  
+  (hook-routes))
