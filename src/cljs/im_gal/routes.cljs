@@ -1,10 +1,7 @@
 (ns im-gal.routes
   (:require-macros [secretary.core :refer [defroute]])
-  (:import goog.History)
   (:require
    [secretary.core :as secretary]
-   [goog.events :as gevents]
-   [goog.history.EventType :as EventType]
    [re-frame.core :as re-frame]
    [im-gal.events :as events]
    [pushy.core :as pushy]))
