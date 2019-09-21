@@ -13,8 +13,10 @@
      [:h1 (str "Hello from " @name ". This is thafsdfsdfsfe Home Page.")]
 
      [:div
-      [:a {:href "#/about"}
-       "go to About Page"]]]))
+      [:a {:href "/about"}
+       "go to About Page"]
+      [:a {:href "/contact"}
+       "go to Contact Page"]]]))
 
 
 ;; about
@@ -25,10 +27,15 @@
    [:h1 "This is the About Page."]
 
    [:div
-    [:a {:href "#/"}
+    [:a {:href "/"}
      "go to Home Page"]]])
 
-
+(defn contact-panel []
+  [:div
+   [:h1 "This is the Contact Page"]
+   [:div
+    [:a {:href "/"}
+     "go to Home Page"]]])
 ;; main
 
 
@@ -36,6 +43,7 @@
   (case panel-name
     :home-panel [home-panel]
     :about-panel [about-panel]
+    :contact-panel [contact-panel]
     [:div]))
 
 (defn show-panel [panel-name]

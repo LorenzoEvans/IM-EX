@@ -6,7 +6,8 @@
    [goog.events :as gevents]
    [goog.history.EventType :as EventType]
    [re-frame.core :as re-frame]
-   [im-gal.events :as events]))
+   [im-gal.events :as events]
+   [pushy.core :as pushy]))
 
 (defn hook-browser-navigation! []
   (doto (History.)
@@ -17,7 +18,7 @@
     (.setEnabled true)))
 
 (defn app-routes []
-  (secretary/set-config! :prefix "#")
+  (secretary/set-config! :prefix "/")
   ;; --------------------
   ;; define routes here
   (defroute "/" []
@@ -25,6 +26,9 @@
 
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
+
+  (defroute "/contact" []
+    (re-frame/dispatch [::events/set-active-panel :contact-panel]))
 
 
   ;; --------------------
