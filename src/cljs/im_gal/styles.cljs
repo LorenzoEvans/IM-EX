@@ -2,11 +2,11 @@
   (:require [herb.core :refer [defglobal]]))
 
 (defglobal global
-  [:body {:margin 0 :border "6px solid black"}])
-(defn example-style []
-  {:background "red"
-   :height "50px"
-   :width "10%"})
+  [:body {:margin 0, :height "100vh"}])
+
+(defn height []
+  {:height "100vh"})
+
 
 ; (defn app []
 ;   {})

@@ -3,33 +3,16 @@
    [re-frame.core :as re-frame]
    [im-gal.subs :as subs]
    [herb.core :as herb :refer [<class]]
-   [im-gal.layout :as layout :refer [home]]))
-
-;; about
-
-
-(defn about-panel []
-  [:div
-   [:h1 "This is the About Page."]
-
-   [:div
-    [:a {:href "/"}
-     "go to Home Page"]]])
-
-(defn contact-panel []
-  [:div
-   [:h1 "This is the Contact Page"]
-   [:div
-    [:a {:href "/"}
-     "go to Home Page"]]])
-;; main
+   [im-gal.layout :as layout :refer [home 
+                                     about
+                                     contact]]))
 
 
 (defn- panels [panel-name]
   (case panel-name
     :home-panel [home]
-    :about-panel [about-panel]
-    :contact-panel [contact-panel]
+    :about-panel [about]
+    :contact-panel [contact]
     [:div]))
 
 (defn show-panel [panel-name]
