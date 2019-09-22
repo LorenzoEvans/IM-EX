@@ -1,7 +1,7 @@
 (ns im-gal.layout
   (:require
    [herb.core :as h :refer [<class]]
-   [im-gal.styles :as styles ]))
+   [im-gal.styles :as styles]))
 
 ; (defn home []
 ;   [:nav.bg-washed-red.pa3.pa4-ns
@@ -15,7 +15,7 @@
 ;      "Contact"]]])
 
 (defn home []
-  [:nav.bg-near-white.pa3.pa4-ns
+  [:nav {:class "bg-near-white pa3 pa4-ns"}
    [:a.dark-gray.avenir.link.dim.b.f1.f-sub-headline-ns.tc.db.mb3.mb4-ns.tj
     "Welcome to The Immutable Gallery"]
    [:div.tc.pb3
