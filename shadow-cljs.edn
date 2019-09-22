@@ -7,6 +7,7 @@
                 :asset-path      "/js/compiled"
                 :modules         {:app {:init-fn im-gal.core/init
                                         :preloads [devtools.preload]}}
-                :devtools        {:http-root    "resources/public"
+                :devtools        {:after-load im-gal.core/mount-root
+                                  :http-root    "resources/public"
                                   :http-port    8280
                                   :http-handler im-gal.handler/dev-handler}}}}

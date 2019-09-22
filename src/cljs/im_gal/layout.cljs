@@ -1,6 +1,7 @@
 (ns im-gal.layout
-  (:require [herb.core :as h :refer [<class]]
-            [im-gal.styles :as styles :refer [example-style]]))
+  (:require
+   [herb.core :as h :refer [<class]]
+   [im-gal.styles :as styles :refer [example-style]]))
 
 (defn home []
   [:div {:class (<class example-style)}
