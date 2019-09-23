@@ -37,3 +37,5 @@
              :aot          [im-gal.server]
              :uberjar-name "im-gal.jar"
              :prep-tasks   ["compile" ["prod"]]}})
+
+

@@ -3,26 +3,25 @@
    [herb.core :as h :refer [<class]]
    [im-gal.styles :as styles]))
 
-; (defn home []
-;   [:nav.bg-washed-red.pa3.pa4-ns
-;    [:a.navy.system-sans-serif.link.dim.b.f1.f-headline-ns.tc.db.mb3.mb4-ns
-;     "Welcome to The Immutable Gallery"]
 
-;    [:div.tc.pb3
-;     [:a.no-underline.link.dim.gray.f6.f5-ns.dib.mr3.f1.lh-title {:href "/about"}
-;      "About"]
-;     [::a.no-underline.link.dim.gray.f6.f5-ns.dib.mr3.f1.lh-title {:href "/contact"}
-;      "Contact"]]])
+; (defn bg-border []
+;   ^{:pseudo 
+;     {:hover 
+;      {:border-radius "0.25rem"}}})
+
+
+(defn link-border
+  []
+  {:border "2px solid black"})
+
 
 (defn home []
-  [:nav {:class "bg-near-white pa3 pa4-ns"}
+  [:nav {:class "bg-near-white fl w-100"}
    [:a.dark-gray.avenir.link.dim.b.f1.f-sub-headline-ns.tc.db.mb3.mb4-ns.tj
     "Welcome to The Immutable Gallery"]
-   [:div.tc.pb3
-    [:a.no-underline.link.dib.mr3.f1.lh-title.avenir.hover-washed-green.navy.grow.dim.bg-animate.bg-white.hover-bg-black.br2.ba.bw2
-     {:href "/about"} "About"]
-    [:a.no-underline.link.dim.gray.dib.mr3.f1.lh-title.avenir.hover-washed-green.navy.grow.dim.hover-bg-black
-     {:href "/contact"} "Contact"]]])
+    [:a.no-underline.link.dib.mr5.f2.lh-title.avenir.hover-washed-green.navy.grow.dim.bg-animate.bg-white.hover-bg-black.br2.ba2.bw2.pa2.w-20 
+     {:class (<class link-border) :href "/about"} "About"] [:a.no-underline.link.dib.mr5.f2.lh-title.avenir.hover-washed-green.navy.grow.dim.bg-animate.bg-white.hover-bg-black.br2.ba2.bw2.pa2.w-20
+     {:class (<class link-border) :href "/contact"} "Contact"]])
 
 (defn about []
   [:div
