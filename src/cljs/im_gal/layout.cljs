@@ -19,7 +19,7 @@
    [:a.dark-gray.avenir.link.dim.b.f1.f-sub-headline-ns.tc.db.mb3.mb4-ns.tj
     "Welcome to The Immutable Gallery"]
    [:div.tc.pb3
-    [:a.no-underline.link.dib.mr3.f1.lh-title.avenir.hover-washed-green.navy.grow.dim.bg-animate.bg-white.hover-bg-black
+    [:a.no-underline.link.dib.mr3.f1.lh-title.avenir.hover-washed-green.navy.grow.dim.bg-animate.bg-white.hover-bg-black.br2.ba.bw2
      {:href "/about"} "About"]
     [:a.no-underline.link.dim.gray.dib.mr3.f1.lh-title.avenir.hover-washed-green.navy.grow.dim.hover-bg-black
      {:href "/contact"} "Contact"]]])
