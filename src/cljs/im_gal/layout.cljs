@@ -12,20 +12,23 @@
 
 (defn link-border
   []
-  {:border "1px solid black"})
+  {:border "1px solid gainsboro"})
 
+(defn nav []
+  [:div.flex.justify-center.ba.bg-near-white.w-third
+   [:div.near-black.avenir.fw2.f2.f-headline-ns.db.bg-near-black
+    [:nav {:class "br2 flex row justify-center pa2 washed-green"}
+     "The Immutable Gallery"]
+    [:a.no-underline.link.dib.mr5.ml5.f2.bg-near-white.avenir.hover-washed-blue.navy.grow.glow.bg-animate.hover-bg-near-black.br3.ba2.bw2.pa2.h3.w-30.tc
+     {:class (<class link-border) :href "/about"} "About"]
+    [:a.no-underline.link.dib.mr5.ml5.f2.bg-near-white.avenir.hover-washed-blue.navy.grow.glow.bg-animate.hover-bg-near-black.br3.ba2.bw2.pa2.h3.w-30.tc
+     {:class (<class link-border) :href "/contact"} "Contact"]]])
 
-(defn home []
-  [:div.bg-washed-green.h-100.w-100
-   [:nav {:class "w-100 br2 mt4"}
-    [:a.near-black.avenir.link.dim.fw4.f1.f-headline-ns.tc.db.mb3.mb4-ns.tj.i
-     "Le Musée Immuable"]
-    [:a.no-underline.link.dib.mr5.ml5.f2.bg-near-white.lh-title.avenir.hover-washed-blue.navy.grow.glow.bg-animate.hover-bg-near-black.br3.ba2.bw2.pa2.w-20 
-     {:class (<class link-border) :href "/about"} "About"] 
-    [:a.no-underline.link.dib.mr5.ml5.f2.bg-near-white.lh-title.avenir.hover-washed-blue.navy.grow.glow.bg-animate.hover-bg-near-black.br3.ba2.bw2.pa2.w-20
-     {:class (<class link-border) :href "/contact"} "Contact"]]
-       [:article.f3.h4.avenir.bg-washed-blue.w-third.black.mt2.pa2 {:class (<class link-border)} 
-        "AN ART DEFECTOR, AN ASTRAL VECTOR, ATLANTIC LECTURE, AN ORCHID TEXTURE, AN ART COLLECTOR...-Girouard"]])
+(defn right-sidebar []
+  [:div.bg-near-black.h-100.w-third])
+
+(defn left-sidebar []
+  [:div.bg-near-black.h-100.w-third])
 
 (defn about []
   [:div
@@ -41,3 +44,10 @@
    [:div
     [:a {:href "/"}
      "go to Home Page"]]])
+
+(defn home []
+  [:div.flex.row.justify-center.ba.bg-near-white.w-100
+   [nav]
+   [right-sidebar]
+   [left-sidebar]]
+  )
