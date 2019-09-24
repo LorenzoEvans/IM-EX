@@ -12,6 +12,7 @@
                  [ring "1.7.1"]
                  [kibu/pushy "0.3.8"]
                  [herb "0.10.0"]
+                 [quil "2.6.0"]
                  [tincture "0.3.2" :exclusions [reagent re-frame]]]
 
   :plugins []
