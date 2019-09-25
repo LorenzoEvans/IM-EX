@@ -13,7 +13,8 @@
                  [kibu/pushy "0.3.8"]
                  [herb "0.10.0"]
                  [quil "2.6.0"]
-                 [tincture "0.3.2" :exclusions [reagent re-frame]]]
+                 [tincture "0.3.2" :exclusions [reagent re-frame]]
+                 [antizer "0.3.1"]]
 
   :plugins []
 

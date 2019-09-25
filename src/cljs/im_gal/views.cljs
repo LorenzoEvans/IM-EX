@@ -3,10 +3,9 @@
    [re-frame.core :as re-frame]
    [im-gal.subs :as subs]
    [herb.core :as herb :refer [<class]]
-   [im-gal.layout :as layout :refer [home 
+   [im-gal.layout :as layout :refer [home
                                      about
                                      contact]]))
-
 
 (defn- panels [panel-name]
   (case panel-name
