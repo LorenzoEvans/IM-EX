@@ -1,20 +1,16 @@
 (ns im-gal.layout
-  (:require
+  (:require-macros
    [herb.core :as h :refer [<class]]
    [im-gal.styles :as styles :refer [nav-div
                                      nav-div-2
                                      nav-nav
                                      nav-h1
                                      nav-anchor]]
-   [tincture.container]))
-
-
-
+   [quil.core :as q]))
 
 (defn link-border
   []
   {:border "1px solid #999999"})
-
 
 (defn nav []
   [:div {:class nav-div}
@@ -24,10 +20,9 @@
      [:a {:class (str (<class link-border) nav-anchor "hover-border") :href "/about"} "About"]
      [:a {:class (str (<class link-border) nav-anchor "hover-border") :href "/contact"} "Contact"]]]])
 
-
-
 (defn middle-bar []
-  [:div.bg-near-black.w-third.ba.bw3.washed-blue])
+  [:div.bg-near-black.w-third.ba.bw3.washed-blue
+   [:canvas.washed-green "hi"]])
 
 (defn left-sidebar []
   [:div.bg-light-gray.w-third])
@@ -44,7 +39,7 @@
   [:div.bg-near-white.w-100
    [:h1.f-sub-headline.lh-title.avenir.f2 "This is the Contact Page"]
    [:div
-    [:a{:class (str (<class link-border) nav-anchor "hover-border") :href "/"}
+    [:a {:class (str (<class link-border) nav-anchor "hover-border") :href "/"}
      "go to Home Page"]]])
 
 (defn home []
