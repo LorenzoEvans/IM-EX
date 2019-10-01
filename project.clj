@@ -13,7 +13,7 @@
                  [kibu/pushy "0.3.8"]
                  [herb "0.10.0"]
                  [thheller/shadow-cljsjs "0.0.20"]
-                 [quil "3.0.0"]]
+                 [thi.ng/geom "1.0.0-RC3"]]
 
   :plugins []
 
@@ -22,15 +22,6 @@
   :source-paths ["src/clj" "src/cljs"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
-
-  :cljsbuild {:builds
-              {:id "dev"
-               :source-paths ["src"]
-               :figwheel false
-               :compiler {:main "im-gal.core"
-                          :output-to "resources/public/js/im-gal.js"
-                          :output-dir "resources/public/js/development"
-                          :asset-path "js/compiled"}}}
 
   :aliases {"dev"  ["with-profile" "dev" "run" "-m" "shadow.cljs.devtools.cli" "watch" "app"]
             "prod" ["with-profile" "prod" "run" "-m" "shadow.cljs.devtools.cli" "release" "app"]}
