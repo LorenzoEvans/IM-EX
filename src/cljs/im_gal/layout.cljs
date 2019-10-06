@@ -5,7 +5,9 @@
                                      nav-div-2
                                      nav-nav
                                      nav-h1
-                                     nav-anchor]]))
+                                     nav-anchor]]
+   [cljsjs.d3]
+   [clojure.string :as str]))
 
 (defn link-border
   []
@@ -20,8 +22,7 @@
      [:a {:class (str (<class link-border) nav-anchor "hover-border") :href "/contact"} "Contact"]]]])
 
 (defn middle-bar []
-  [:div.bg-near-black.w-third.ba.bw3.washed-blue
-   [:canvas.washed-green "hi"]])
+  [:div.bg-near-black.w-third.ba.bw3.washed-blue])
 
 (defn left-sidebar []
   [:div.bg-light-gray.w-third])

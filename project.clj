@@ -12,8 +12,7 @@
                  [ring "1.7.1"]
                  [kibu/pushy "0.3.8"]
                  [herb "0.10.0"]
-                 [thheller/shadow-cljsjs "0.0.20"]
-                 [thi.ng/geom "1.0.0-RC3"]]
+                 [cljsjs/d3 "5.12.0-0"]]
 
   :plugins []
 
