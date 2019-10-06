@@ -22,7 +22,8 @@
      [:a {:class (str (<class link-border) nav-anchor "hover-border") :href "/contact"} "Contact"]]]])
 
 (defn middle-bar []
-  [:div.bg-near-black.w-third.ba.bw3.washed-blue])
+  [:div.bg-near-black.w-third.ba.bw3.washed-blue
+   [:div#d3-test]])
 
 (defn left-sidebar []
   [:div.bg-light-gray.w-third])
