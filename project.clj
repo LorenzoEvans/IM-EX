@@ -7,6 +7,7 @@
                  [reagent "0.8.1"]
                  [re-frame "0.10.9"]
                  [secretary "1.2.3"]
+                 [reanimated "0.6.1"]
                  [compojure "1.6.1"]
                  [yogthos/config "1.1.5"]
                  [ring "1.7.1"]
