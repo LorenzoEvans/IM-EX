@@ -8,11 +8,25 @@
                                      content-area
                                      nav-h3
                                      nav-anchor]]
+   [reagent.core :as reagent]
+   [reanimated.core :as anim]
    [clojure.string :as str]))
 
 (defn link-border
   []
   {:border "2px solid #999999"})
+
+(defn pop-contacts []
+         (let [show? (reagent/atom false)]
+           (fn a-pop-when-example []
+             [:div.flex.flex-column.justify-between.w-100.h-100
+              [:button.bg-near-black.washed-green.avenir.mr5.mt4.pa2 {:on-click (anim/toggle-handler show?)} "Github"]
+              [anim/pop-when @show?
+               [:div.flex.flex-column.justify-between.w-100.h-100.ma4 
+                [:span.mt4.tc [:a.fw6.f3tracked.near-black.dim {:href "www.github/com"} "Github"]]
+                [:span.mt4.tc [:a.fw6.f3tracked.near-black.dim {:href "www.github/com"} "LinkedIn"]]
+                [:span.mt4.tc [:a.fw6.f3tracked.near-black.dim {:href "www.github/com"} "Tweeter"]]]
+               ]])))
 
 (defn width []
   {:width " 40% "})
@@ -22,20 +36,20 @@
   [:div.bg-white.fixed.z-2 {:class (str nav-div (<class width)) }
    [:div.vh-100.flex.flex-column.justify-between {:class nav-div-2}
     [:nav.vh-100.shadow-5.w-100 {:class nav-nav}
-[:div.flex.flex-column.justify-evenly.self-center.items-center
- [:h1.f2-m.bb.bw2.w-100 {:class nav-h1} "Lorenzo Evans"]
- [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Programmer."]
- [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Creative."]
- [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Writer."]]]]])
+     [:div.flex.flex-column.justify-evenly.self-center.items-center
+      [:h1.f2-m.bb.bw2.w-100 {:class nav-h1} "Lorenzo Evans"]
+      [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Programmer."]
+      [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Creative."]
+      [:span.bb.bw2.f-subheadline.f2-m.pa1.avenir.fw5.hover.dim.dark-gray [:h3.ma4 {:class nav-h3}] "Writer."]]]]])
 
 (defn left-sidebar []
-  [:div.h-100.overflow-scroll.avenir.w-100 {:class (<class width-2)}
-   [:section.tc.h-75.bw2.bg-washed-red.navy.f-headline.w-100.relative {:class content-area} "Skills"]
-   [:section.tc.h-75.bw2.bg-washed-blue.navy.w-100.fixed {:class content-area} "Experience"]
-   [:section.tc.h-75.bw2.bg-washed-near-white.navy {:class content-area} "Projects"]
-   [:section.tc.h-75.bw2.bg-washed-near-white.navy.absolute.w-100.h-100 {:class content-area} "Blog"]
-   [:section.tc.h-75.bw2.bg-washed-near-white.navy {:class content-area} "Contact"]
-   [:section.h-100 "holup"]])
+  [:div.h-100.overflow-scroll.avenir.w-100
+   [:section.tc.h-100.bw2.bg-washed-red.navy.f-headline.w-100.relative {:class content-area} "Skills"]
+   [:section.tc.h-100.bw2.bg-washed-near-white.navy.absolute.w-100.h-100 {:class content-area}
+    [pop-contacts]]
+   [:section.tc.h-100.bw2.bg-washed-blue.navy.w-100.fixed {:class content-area} "Experience"]
+   [:section.tc.h-100.bw2.bg-washed-yellow.navy.flex.flex-row.justify-around {:class content-area} "Projects"]
+   [:section.tc.h-100.bw2.bg-washed-yellow.navy {:class content-area} "Blog"]])
 
 (defn about []
   [:div.bg-near-white.w-100
