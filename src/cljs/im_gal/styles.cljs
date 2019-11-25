@@ -9,10 +9,16 @@
   {:height "100vh"})
 
 
-; (defn app []
-;   {})
+(defn link-border
+  []
+  {:border "2px solid #999999"})
 
 ;; im-gal.layout nav component classnames for Tachyons.
+
+(defn width []
+  {:width " 40% "})
+(defn width-2 []
+  {:width " 60% "})
 
 
 (defn new-string [x]

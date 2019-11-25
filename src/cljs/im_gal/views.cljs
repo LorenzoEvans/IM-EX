@@ -2,10 +2,10 @@
   (:require
    [re-frame.core :as re-frame]
    [im-gal.subs :as subs]
-   [herb.core :as herb :refer [<class]]
-   [im-gal.layout :as layout :refer [home
-                                     about
-                                     contact]]))
+   [im-gal.layout :refer [home]]
+   [im-gal.components.about :refer [about]]
+   [im-gal.components.contact :refer [contact]]
+   ))
 
 (defn- panels [panel-name]
   (case panel-name
