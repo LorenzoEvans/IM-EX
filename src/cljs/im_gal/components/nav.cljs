@@ -8,7 +8,7 @@
             [herb.core :refer [<class]]))
 
 (defn nav []
-  [:div.bg-white.fixed.z-2 {:class (str nav-div (<class width))}
+  [:div.bg-white.z-2 {:class (str nav-div (<class width))}
    [:div.vh-100.flex.flex-column.justify-between {:class nav-div-2}
     [:nav.vh-100.shadow-5.w-100 {:class nav-nav}
      [:div.flex.flex-column.justify-evenly.self-center.items-center

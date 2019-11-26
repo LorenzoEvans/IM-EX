@@ -23,6 +23,6 @@
 
 
 (defn home []
-  [:div.flex.row.bg-near-white.w-100.purple.bw3.vh-100.flex-row-m
+  [:div.flex.flex-row.justify-between.bg-near-white.w-100.purple.bw3.vh-100.flex-row-m
    [nav]
    [left-side]])
