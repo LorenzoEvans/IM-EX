@@ -94,3 +94,8 @@ html {
 .no-shadow {
 	text-shadow: none;
 }
+
+.bg-image {
+	background-image: url('https://images.unsplash.com/photo-1485844254435-b7509760a25c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+	background-size: contain;
+}
