@@ -13,7 +13,7 @@
    [:div.vh-100.flex.flex-column.justify-between {:class nav-div-2}
     [:nav.vh-100.shadow-5.w-100 {:class nav-nav}
      [:div.flex.flex-column.justify-evenly.self-center.items-center.relative
-      [:h1.f2-m.bb.bw3.w-100 {:class nav-h1} "Lorenzo Evans"]
-      [:span.bb.bw3.f-subheadline.f2-m.pa1.avenir.fw5.hover.glow.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Programmer."]
-      [:span.bb.bw3.f-subheadline.f2-m.pa1.avenir.fw5.hover.glow.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Creative."]
-      [:span.bb.bw3.f-subheadline.f2-m.pa1.avenir.fw5.hover.glow.grow.hover-washed-red. [:h3.ma4 {:class nav-h3}] "Writer."]]]]])
+      [:h1.f-headline.dark-pink.bb.bw3.w-100 {:class nav-h1} "Lorenzo Evans"]
+      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Programmer."]
+      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Creative."]
+      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red. [:h3.ma4 {:class nav-h3}] "Writer."]]]]])
