@@ -8,12 +8,12 @@
             [herb.core :refer [<class]]))
 
 (defn nav []
-  [:div.bg-white.w-40 {:class nav-div}
-   [:img.absolute.bg-image {:src "https://images.unsplash.com/photo-1556804599-f7d0c84b61b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80"}]
+  [:div.w-40 {:class nav-div}
+   [:img.absolute.bg-image]
    [:div.vh-100.flex.flex-column.justify-between {:class nav-div-2}
-    [:nav.vh-100.shadow-5.w-100 {:class nav-nav}
-     [:div.flex.flex-column.justify-evenly.self-center.items-center.relative
-      [:h1.f-headline.dark-gray.b--mid-gray.bb.bw3.w-100 {:class nav-h1} "Lorenzo Evans"]
-      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Programmer."]
-      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red.z-3 [:h3.ma4 {:class nav-h3}] "Creative."]
-      [:span.mt3.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red. [:h3.ma4 {:class nav-h3}] "Writer."]]]]])
+    [:nav.vh-100.w-100 {:class nav-nav}
+     [:div.flex.flex-column.justify-between.h-75.self-center.items-center.relative
+      [:span.mt3.bw3.f-headline.light-green.grow.glow.hover-animate.bg-mid-gray.o-80.w-100.hover-washed-red.ba.w-90-m.f1-m.fw6.pa1 "Lorenzo Evans"]
+      [:span.mt3.w-60-m.ba.bw1.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red "Programmer."]
+      [:span.mt3.w-60-m.ba.bw1.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red "Creative."]
+      [:span.mt3.w-60-m.ba.bw1.w-100.hover-animate.bb.bw3.bg-mid-gray.o-80.glow.f-headline.f2-m.pa1.avenir.fw6.light-green.grow.hover-washed-red. "Writer."]]]]])

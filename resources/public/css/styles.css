@@ -95,3 +95,6 @@ html {
 	text-shadow: none;
 }
 
+.bg-image {
+	background: url("../assets/library.jpeg") center ;
+}
