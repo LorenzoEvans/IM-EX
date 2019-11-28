@@ -18,6 +18,24 @@
    "Git"
    "Clojure/Script"])
 
+(def projects 
+  [{:name "Maybe Sheeps"
+    :about "info"
+    :tech-used "tech info"
+    }
+   {:name "Aunalytix"
+    :about "info"
+    :tech-used "tech info"
+    }
+   {:name "RateMyDIY"
+    :about "info"
+    :tech-used "tech info"
+    }
+   {:name "Note Taken"
+    :about "info"
+    :tech-used "tech info"
+    }
+   ])
 (defn left-side []
   [:div.h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m
    [:section.mb2.tracked.bw2.threed-text.dark-gray.h-100.bw2.w-100.justify-between.bb {:class content-area}  "Skills"
@@ -31,6 +49,8 @@
     [:div.flex.flex-row.flex-wrap
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Maybe Sheeps"]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Aunalytix"]
-     [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Note Taken"]
+     [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Note Taken"
+      [:div.flex.flex-column.flex-wrap
+       ]]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "stuff"]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "stuff"]]]])
