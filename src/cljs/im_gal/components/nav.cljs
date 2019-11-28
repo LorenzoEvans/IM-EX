@@ -5,8 +5,7 @@
                                    nav-h1
                                    nav-h3
                                    width]]
-            [herb.core :refer [<class]]
-            ["AOS" :as aos]))
+            [herb.core :refer [<class]]))
 
 (defn nav []
   [:div.w-40 {:class nav-div}
