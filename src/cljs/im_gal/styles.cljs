@@ -24,12 +24,13 @@
 (defn new-string [x]
   (clojure.string/replace x "." " "))
 
-(def name-cta "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.element")
+(def name-cta (new-string "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.elements"))
 (def nav-div (new-string " flex.flex-column.justify-between.vh-100.dark-blue "))
 (def nav-div-2 (new-string "avenir.f2.f-sub-headline.lh-title.db.bg-washed-gray"))
 (def nav-nav (new-string "flex.column.justify-center.flex-wrap"))
 (def nav-h1 (new-string "fw6.f-headline.tc.near-black"))
-(def nav-h3 (new-string ""))
+(def project-container (new-string "w-75.border-box.f1.fw5.ba.bw2.white.h-25.ma4.bg-black-20.bw2.no-shadow.pa2"))
+(def project-content (new-string "ba.bw3.b--washed-green.pa2.f2.tracked-tight.lh-copy"))
 (def nav-span (new-string "mt3.w-60-m.bw2.w-75.hover-animate.bb.glow.f2.f2-m.pa1.avenir.fw6.washed-green.grow.hover-dark-gray.hover-bg-animated.hover-bg-gray.glow.bounceInElement"))
 (def nav-anchor (new-string "no-underline.fw3.link.dib.f2.bg-near-white.tracked.self-center.avenir.hover-washed-blue.ba.bw1.hover-purple.navy.grow.glow.bg-animate.hover-bg-near-black.br3.pa2.w-100.tc.h5.ma1."))
 (def content-area (new-string "f-headline.fw6"))

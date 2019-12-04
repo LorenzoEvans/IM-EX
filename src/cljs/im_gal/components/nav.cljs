@@ -3,10 +3,8 @@
                                    nav-div-2
                                    nav-nav
                                    nav-h1
-                                   nav-h3
                                    nav-span
                                    contact-section
-                                   name-cta
                                    width]]
             [herb.core :refer [<class]]))
 
@@ -16,7 +14,7 @@
    [:div.vh-100.flex.flex-column.justify-between {:class nav-div-2}
     [:nav.vh-100.w-100 {:class nav-nav}
      [:div.flex.flex-column.justify-between.h-75.self-center.items-center.relative
-      [:div {:class name-cta} "Lorenzo Evans"]
+      [:div.mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.element "Lorenzo Evans"]
       [:span {:class nav-span} "Programmer."]
       [:span {:class nav-span} "Creative."]
       [:span {:class nav-span} "Writer."]
