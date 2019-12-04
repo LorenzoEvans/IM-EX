@@ -45,12 +45,11 @@
        [:span.f1.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.f4-m.ma1-m.justify-between-m item])]]
    [:section.mb2.tracked.threed-text.dark-gray.flex.flex-column.h-100.w-100.bb.bw2.b--near-white.mt5 {:class content-area} "Experience"]
    [:section.mb2.tracked.threed-text.dark-gray.h-100.bw2.w-100.b--near-white.mt5.overflow-scroll {:class content-area} "Projects"
-    [:h1.tc.f5.ttu.fw6.tracked.mb4.avenir "Directory"]
     [:div.flex.flex-row.flex-wrap
-     [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Maybe Sheeps"]
+     [:div.w-75.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.bg-black-20.bw2.no-shadow.pa2 "Maybe Sheeps"
+      [:div.ba.bw3.b--washed-green.pa2.f2.tracked-tight.lh-copy "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."]]
+      [:div.w-75.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.bg-black-20.bw2.no-shadow.pa2 "Note Taken"
+       [:div.ba.bw3.b--washed-green.pa2.f2.tracked-tight.lh-copy "Desktop application for taking notes/reminders, etc, originally done in React/Node/Express, re-vamped in Seesaw, a Clojure framework for developing Desktop applications."]]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Aunalytix"]
-     [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "Note Taken"
-      [:div.flex.flex-column.flex-wrap
-       ]]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "stuff"]
      [:div.w-50.border-box.f1.fw5.overflow-hidden.ba.bw2.white.h-25.ma4.near-black.no-shadow "stuff"]]]])
