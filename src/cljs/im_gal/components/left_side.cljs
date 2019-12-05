@@ -1,6 +1,6 @@
 (ns im-gal.components.left-side
   (:require [im-gal.styles :refer [content-area project-container
-                                   project-content]]))
+                                   project-content nav-span doc-span name-cta]]))
 (def skills 
   ["Javascript"
    "React"
@@ -29,9 +29,9 @@
     :tech-used ["tech info"]}
     
    {:name "RateMyDIY"
-    :about "info"
-    :tech-used ["Firebase, GraphQL, React, SCSS"]}
-    
+    :about "RateMyDiy targets people who want to get up and get productive and learn different skills. It utilizes a rating system to analyze the most effective and enjoyed projects, project makers, and reviewers. This will allow the projects and user generated content that is most beneficial to the community to be the most available to people who are looking for high quality information."
+    :tech-used ["Firebase, GraphQL, React, SCSS"]
+    :docs "https://ratemydiy.github.io/Documentation/Architecture.html"}
    {:name "Note Taken"
     :about  "Desktop application for taking notes/reminders, etc, originally done in React/Node/Express/SQL, re-vamped in Seesaw, a Clojure framework for developing Desktop applications in Swing, JDBC/SQL, features including but not limited to markdown parsing, and export to file extensions."
     :tech-used ["tech info"]}])
@@ -51,6 +51,8 @@
         ^{:key (:name project)}
         [:div {:class project-container} (:name project)
           [:div {:class project-content} (:about project)]
+          (cond (not= (:docs project) nil)[:a.f3.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3. {
+                  :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
           [:div 
            (for [item (:tech-used project)] [:li.f5.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.ma1-m.justify-between-m item])]]])]])
       
