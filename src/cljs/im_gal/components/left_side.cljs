@@ -47,6 +47,7 @@
       {:title "Team Lead (Lambda X)"
        :duration "Currently Working Here"
        :job-desc ""}])
+
 (defn left-side []
   [:div.h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m
    [:section.mb2.tracked.bw2.threed-text.dark-gray.h-100.bw2.w-100.justify-between.bb {:class content-area}  "Skills"
@@ -55,8 +56,9 @@
        ^{:key item}
        [:span.f1.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.f4-m.ma1-m.justify-between-m item])]]
    [:section.mb2.tracked.threed-text.dark-gray.flex.flex-column.h-100.w-100.bb.bw2.b--near-white.mt5 {:class content-area} "Experience"
-    [:div.no-shadow 
-      [:span.f2 "Title: "] [:span.f3 "Team Lead (Contract)"]]]
+    (for [expr experience] 
+      [:div.no-shadow.ma2.flex.flex-column {:class project-content}
+      [:<> [:span.f2 "Title: " ] [:span.f3 (:title expr)]]])]
    [:section.mb2.tracked.threed-text.dark-gray.h-100.bw2.w-100.b--near-white.mt5.overflow-scroll.bl.b--washed-red.bw3.pl2 {:class content-area} "Projects"
     (for [project projects]
      [:div.flex.flex-row.flex-wrap
