@@ -55,7 +55,7 @@
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 
 (defn content-side []
-  [:div {:class content-container}
+  [:div.mv6 {:class content-container}
    [:section {:class skills-content-area}  "Skills"
     [:div {:class skills-container}
      (for [item skills]

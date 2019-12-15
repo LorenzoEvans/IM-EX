@@ -19,6 +19,6 @@
       [:span {:class nav-span} "Creative."]
       [:span {:class nav-span} "Writer."]
       [:section {:class contact-section}
-        [:span.avenir.no-shadow.near-white.f-headline.w-100.bb.bw2.b--dark-gray.f2-m "Contact"]
-        [:a.no-underline.ba.bw2.avenir.near-white.f1.glow.no-shadow {:href "mailto:lorenzo.evans94@gmail.com"} "Email"]
-       [:a.avenir.ba.bw2.no-shadow.near-white.hover-animate.glow.f1.no-underline {:href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]]]]]])
+        [:span.avenir.no-shadow.near-black.f-headline.w-100.bb.bw2.b--dark-gray.f2-m "Contact"]
+        [:a.no-underline.ba.bw2.avenir.near-black.f1.glow.no-shadow {:href "mailto:lorenzo.evans94@gmail.com"} "Email"]
+       [:a.avenir.ba.bw2.no-shadow.near-black.hover-animate.glow.f1.no-underline {:href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]]]]]])
