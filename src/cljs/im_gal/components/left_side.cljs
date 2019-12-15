@@ -2,7 +2,8 @@
   (:require [im-gal.styles :refer [content-area project-container project-link
                                    project-content nav-span doc-span name-cta
                                    skill-style project-content-area experience-content-area
-                                   skills-content-area]]))
+                                   skills-content-area f-row-wrap content-container
+                                   skills-container expr-bullet]]))
 (def skills 
   ["Javascript"
    "React"
@@ -20,6 +21,9 @@
    "OOP"
    "Git"
    "Clojure/Script"])
+
+; Projects map
+
 (def projects 
   [ {:name "Maybe Sheeps"
      :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
@@ -40,6 +44,7 @@
     :about  "Web application for taking notes/reminders, re-written as a Desktop application in Clojure, features including but not limited to markdown parsing, and export to file extensions."
     :tech-used ["Originally: React, Node, Express, SQL. Re-work: Clojure/Seesaw/JDBC/SQL.",]
     :app-link "TBA"}])
+; Experience map
 
 (def experience
   [{:title "Team Lead (Back End)"
@@ -53,10 +58,10 @@
     :duration "Currently Working Here"
     :job-desc [""]}])
 
-(defn left-side []
-  [:div.h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m
+(defn content-side []
+  [:div {:class content-container}
    [:section {:class skills-content-area}  "Skills"
-    [:div.w-100.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m
+    [:div {:class skills-container}
      (for [item skills]
        ^{:key item}
        [:span {:class skill-style} item])]]
@@ -65,18 +70,20 @@
       [:div.no-shadow.ma2.flex.flex-column {:class project-content}
        [:<> 
         [:span.f3 (:title expr)]
-        [:div {:class project-container}
+        [:div.w-75 {:class project-container}
          (for [bullet (expr :job-desc)]
-          [:div {:class project-link} bullet])]]])]
+          [:div.w-100 {:class expr-bullet} bullet])]]])]
    [:section {:class project-content-area} "Projects"
     (for [project projects]
-     [:div.flex.flex-row.flex-wrap
+     [:div {:class f-row-wrap}
         ^{:key (:name project)}
         [:div {:class project-container} (:name project)
           [:div {:class project-content} (:about project)]
-          [:a.tracked-ns.no-underline {:class project-link :href (:app-link project)} "Link to project"]
+          [:a.tracked-ns.no-underline {:class project-link 
+                                       :href (:app-link project)} "Link to project"]
           (cond (not= (:docs project) nil)[:a {:class project-link
                                                :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
           [:div 
-           (for [item (:tech-used project)] [:div.tracked-ns "Tech Used" [:li {:class project-link} item]])]]])]])
+           (for [item (:tech-used project)] 
+            [:div.tracked-ns "Tech Used" [:li {:class project-link} item]])]]])]])
       

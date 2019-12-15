@@ -8,22 +8,21 @@
 (defn height []
   {:height "100vh"})
 
-
 (defn link-border
   []
   {:border "2px solid #999999"})
 
-;; im-gal.layout nav component classnames for Tachyons.
-
 (defn width []
   {:width " 40% "})
+
 (defn width-2 []
   {:width " 60% "})
 
-
 (defn new-string [x]
   (clojure.string/replace x "." " "))
+
 (def project-link (new-string "f3.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3"))
+(def expr-bullet (new-string "f3.no-shadow.self-center.dark-gray.hover-animate.glow.bg-light-gray.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3"))
 (def name-cta (new-string "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.elements"))
 (def nav-div (new-string " flex.flex-column.justify-between.vh-100.dark-blue "))
 (def nav-div-2 (new-string "avenir.f2.f-sub-headline.lh-title.db.bg-washed-gray"))
@@ -40,3 +39,6 @@
 (def content-area (new-string "f-headline.fw6"))
 (def contact-section (new-string "mb2.pa2.dark-gray.h-100.w-80.w-100-m.mt5.ba.bw2.b--washed-red.glow.hover-animate.grow.glow.ma4.no-shadow.near-black.flex.flex-column.h-75.justify-between.f2"))
 (def skill-style (new-string "f1.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.f4-m.ma1-m.justify-between-m"))
+(def f-row-wrap (new-string "flex.flex-row.flex-wrap"))
+(def content-container (new-string "h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m"))
+(def skills-container (new-string "w-100.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m"))
