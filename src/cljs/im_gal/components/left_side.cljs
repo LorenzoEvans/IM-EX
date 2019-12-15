@@ -1,6 +1,8 @@
 (ns im-gal.components.left-side
   (:require [im-gal.styles :refer [content-area project-container project-link
-                                   project-content nav-span doc-span name-cta]]))
+                                   project-content nav-span doc-span name-cta
+                                   skill-style project-content-area experience-content-area
+                                   skills-content-area]]))
 (def skills 
   ["Javascript"
    "React"
@@ -36,30 +38,37 @@
     :app-link "http://ratemydiy.tk"}
    {:name "Note Taken"
     :about  "Web application for taking notes/reminders, re-written as a Desktop application in Clojure, features including but not limited to markdown parsing, and export to file extensions."
-    :tech-used ["Originally: React, Node, Express, SQL. Re-work: Clojure/Seesaw/JDBC/SQL.", ]
+    :tech-used ["Originally: React, Node, Express, SQL. Re-work: Clojure/Seesaw/JDBC/SQL.",]
     :app-link "TBA"}])
 
-  (def experience
-    [{:title "Team Lead (Back End)"
-      :duration "May 2019 - July 2019"
-      :job-desc ""
-      }
-      {:title "Team Lead (Lambda X)"
-       :duration "Currently Working Here"
-       :job-desc ""}])
+(def experience
+  [{:title "Team Lead (Back End)"
+    :duration "May 2019 - July 2019"
+    :job-desc ["Supported 5-9 students in learning, meeting MVP in various frameworks, across all levels of the stack, using agile methods."
+               "Received 2.87 / 3 rating as a Team Lead."
+               "Piloted new school-wide video feed-back program, via retrospectives covering student/TL experience with program."
+               "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}
+      
+   {:title "Team Lead (Lambda X)"
+    :duration "Currently Working Here"
+    :job-desc [""]}])
 
 (defn left-side []
   [:div.h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m
-   [:section.mb2.tracked.bw2.threed-text.dark-gray.h-100.bw2.w-100.justify-between.bb {:class content-area}  "Skills"
+   [:section {:class skills-content-area}  "Skills"
     [:div.w-100.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m
      (for [item skills]
        ^{:key item}
-       [:span.f1.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.f4-m.ma1-m.justify-between-m item])]]
-   [:section.mb2.tracked.threed-text.dark-gray.flex.flex-column.h-100.w-100.bb.bw2.b--near-white.mt5 {:class content-area} "Experience"
+       [:span {:class skill-style} item])]]
+   [:section {:class experience-content-area} "Experience"
     (for [expr experience] 
       [:div.no-shadow.ma2.flex.flex-column {:class project-content}
-      [:<> [:span.f2 "Title: " ] [:span.f3 (:title expr)]]])]
-   [:section.mb2.tracked.threed-text.dark-gray.h-100.bw2.w-100.b--near-white.mt5.overflow-scroll.bl.b--washed-red.bw3.pl2 {:class content-area} "Projects"
+       [:<> 
+        [:span.f3 (:title expr)]
+        [:div {:class project-container}
+         (for [bullet (expr :job-desc)]
+          [:div {:class project-link} bullet])]]])]
+   [:section {:class project-content-area} "Projects"
     (for [project projects]
      [:div.flex.flex-row.flex-wrap
         ^{:key (:name project)}
@@ -67,7 +76,7 @@
           [:div {:class project-content} (:about project)]
           [:a.tracked-ns.no-underline {:class project-link :href (:app-link project)} "Link to project"]
           (cond (not= (:docs project) nil)[:a {:class project-link
-                  :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
+                                               :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
           [:div 
            (for [item (:tech-used project)] [:div.tracked-ns "Tech Used" [:li {:class project-link} item]])]]])]])
       
