@@ -52,11 +52,7 @@
     :job-desc ["Supported 5-9 students in learning, meeting MVP in various frameworks, across all levels of the stack, using agile methods."
                "Received 2.87 / 3 rating as a Team Lead."
                "Piloted new school-wide video feed-back program, via retrospectives covering student/TL experience with program."
-               "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}
-      
-   {:title "Team Lead (Lambda X)"
-    :duration "Currently Working Here"
-    :job-desc [""]}])
+               "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 
 (defn content-side []
   [:div {:class content-container}
