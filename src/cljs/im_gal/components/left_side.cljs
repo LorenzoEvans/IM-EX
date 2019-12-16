@@ -55,7 +55,7 @@
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 
 (defn content-side []
-  [:div.mv6 {:class content-container}
+  [:div {:class content-container}
    [:section {:class skills-content-area}  "Skills"
     [:div {:class skills-container}
      (for [item skills]
@@ -63,12 +63,12 @@
        [:span {:class skill-style} item])]]
    [:section {:class experience-content-area} "Experience"
     (for [expr experience] 
-      [:div.no-shadow.ma2.flex.flex-column {:class project-content}
+      [:div.no-shadow.ma2.mt3.flex.flex-column {:class project-content}
        [:<> 
         [:span.f3 (:title expr)]
-        [:div.w-75 {:class project-container}
+        [:div.w-75.h-100 {:class project-container}
          (for [bullet (expr :job-desc)]
-          [:div.w-100 {:class expr-bullet} bullet])]]])]
+          [:div {:class expr-bullet} bullet])]]])]
    [:section {:class project-content-area} "Projects"
     (for [project projects]
      [:div {:class f-row-wrap}

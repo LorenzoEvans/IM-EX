@@ -80,6 +80,7 @@ html {
 	}
 
 .threed-text {
+	font-size: 3rem;
 	text-shadow:   1px 0px rgb(57, 69, 70), 0px 1px 4px #ccc,
                2px 1px #eee, 1px 2px 4px #ccc,
                3px 2px #eee, 2px 3px 4px #ccc,
@@ -96,7 +97,10 @@ html {
 }
 
 .bg-image {
-	background: url("../assets/browncamo.jpeg") center ;
+	background: url("../assets/plants.jpeg");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 }
 
 .element {
