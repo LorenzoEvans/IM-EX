@@ -3,7 +3,7 @@
                                    project-content nav-span doc-span name-cta
                                    skill-style project-content-area experience-content-area
                                    skills-content-area f-row-wrap content-container
-                                   skills-container expr-bullet]]))
+                                   skills-container expr-bullet experience-container]]))
 (def skills 
   ["Javascript"
    "React"
@@ -43,7 +43,7 @@
    {:name "Note Taken"
     :about  "Web application for taking notes/reminders, re-written as a Desktop application in Clojure, features including but not limited to markdown parsing, and export to file extensions."
     :tech-used ["Originally: React, Node, Express, SQL. Re-work: Clojure/Seesaw/JDBC/SQL.",]
-    :app-link "TBA"}])
+    :app-link "https://github.com/LorenzoEvans/duly-noted"}])
 ; Experience map
 
 (def experience
@@ -66,7 +66,7 @@
       [:div.no-shadow.ma2.mt3.flex.flex-column {:class project-content}
        [:<> 
         [:span.f3 (:title expr)]
-        [:div.w-75.h-100 {:class project-container}
+        [:div.w-75.h-100 {:class experience-container}
          (for [bullet (expr :job-desc)]
           [:div {:class expr-bullet} bullet])]]])]
    [:section {:class project-content-area} "Projects"
