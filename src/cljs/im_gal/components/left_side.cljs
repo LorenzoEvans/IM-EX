@@ -20,30 +20,34 @@
    "FP"
    "OOP"
    "Git"
-   "Clojure/Script"])
+   "Clojure/Script"
+   "Java/JVM"])
 
 ; Projects map
 
 (def projects 
-  [ {:name "Maybe Sheeps"
+  [{:name "Synths For Compilers"
      :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
-     :tech-used [(str "reagent," "ring," "hiccup,")]
-     :app-link "https://maybe-sheeps.herokuapp.com"}
-    
-   {:name "Aunalytix"
-    :about "Aunalytix will target creative artists (currently audio-focused), who are tired of not having access to data regarding their music, due to the nature of the environment in which said data is generated, and likewise, consumers of said art, who are also tired of having the same experience with their data. The goal of this application is to strike up a synergy between the needs and roles of artists, and their supporters, via the user-centric data handling principles this application will enforce."
-    :tech-used [(str "re-frame," "herb," "Tachyons," "secretary," "pushy,")]
-    :app-link "https://aunalytix.herokuapp.com"}
-    
+     :tech-used ["reagent" "tachyons" "hiccup"]
+     :app-link "http://www.synthsforcompilers.dev"}
+   {:name "Portfolio"
+     :about "Personal portfolio using Clojurescript and Tachyons."
+     :tech-used ["Clojurescript" "Tachyons" "re-frame"]
+     :link "http://www.lorenzoevans.me"}
+   {:name "Clojurena"
+    :about "A library that acts as a wrapper over the are.na API"
+    :tech-used ["Clojure"]
+    :link "https://github.com/LorenzoEvans/clojurena"}
    {:name "RateMyDIY"
     :about "RateMyDiy targets people who want to get up and get productive and learn different skills. It utilizes a rating system to analyze the most effective and enjoyed projects, project makers, and reviewers. This will allow the projects and user generated content that is most beneficial to the community to be the most available to people who are looking for high quality information."
-    :tech-used ["Firebase, GraphQL/Apollo, Prisma, Sendgrid, Stripe, Cloudinary, React, SASS"]
+    :tech-used ["Firebase" "GraphQL/Apollo" "Prisma" "Sendgrid" "Stripe" "Cloudinary" "React" "SASS"]
     :docs "https://ratemydiy.github.io/Documentation/Architecture.html"
     :app-link "http://ratemydiy.tk"}
-   {:name "Note Taken"
-    :about  "Web application for taking notes/reminders, re-written as a Desktop application in Clojure, features including but not limited to markdown parsing, and export to file extensions."
-    :tech-used ["Originally: React, Node, Express, SQL. Re-work: Clojure/Seesaw/JDBC/SQL.",]
+   {:name "Personote"
+    :about  "Desktop note-taking application in Clojure, CLJFX/OpenJFX, JDBC/SQL."
+    :tech-used ["Clojure" "CLJFX/OpenJFX" "JDBC/SQL"]
     :app-link "https://github.com/LorenzoEvans/duly-noted"}])
+    
 ; Experience map
 
 (def experience
@@ -77,9 +81,9 @@
           [:div {:class project-content} (:about project)]
           [:a.tracked-ns.no-underline {:class project-link 
                                        :href (:app-link project)} "Link to project"]
-          (cond (not= (:docs project) nil)[:a {:class project-link
+          (cond (not= (:docs project) nil)[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
                                                :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
-          [:div 
+          [:div.tracked-ns.tc "Tech Used"
            (for [item (:tech-used project)] 
-            [:div.tracked-ns "Tech Used" [:li {:class project-link} item]])]]])]])
+            [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])]])
       

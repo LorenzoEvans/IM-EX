@@ -44,4 +44,4 @@
 (def content-container (new-string "h-100.avenir.overflow-scroll.z-3.bw2.b--near-black.w-60.ml3-m"))
 (def skills-container (new-string "w-100.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m"))
 (def experience-container (new-string "w-50.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m"))
-(def my-name (new-string "bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw2.tracked.element"))
+(def my-name (new-string "bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw5.tracked.element"))
