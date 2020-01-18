@@ -97,7 +97,7 @@ html {
 }
 
 .bg-image {
-	background: url("../assets/plants.jpeg");
+	background: url("../assets/building.jpeg");
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
@@ -162,3 +162,4 @@ html {
 	  pulse 3s ease infinite alternate, 
 	  nudge 5s linear infinite alternate;
   }
+
