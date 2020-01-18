@@ -11,17 +11,6 @@
    [reanimated.core :as anim]
    [clojure.string :as str]))
 
-
-
-(defn page []
-  [:div.page
-   ])
-
-
-
-
-
-
 (defn home []
   [:div.flex.flex-row.w-100.purple.bw3.vh-100.flex-row-m.fixed.bg-image
    [nav]
