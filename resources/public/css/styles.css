@@ -93,7 +93,9 @@ html {
 }
 
 .no-shadow {
-	text-shadow: none;
+  text-shadow: none;
+  text-decoration: none;
+  border-radius: 0%;
 }
 
 .bg-image {

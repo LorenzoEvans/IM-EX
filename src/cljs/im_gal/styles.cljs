@@ -21,7 +21,7 @@
 (defn new-string [x]
   (clojure.string/replace x "." " "))
 
-(def project-link (new-string "f3.no-shadow.self-center.dark-gray.hover-animate.grow.glow.bg-washed-blue.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3"))
+(def project-link (new-string "f3.no-shadow.self-center.dark-gray.glow.bg-washed-blue.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3"))
 (def expr-bullet (new-string "f3.no-shadow.self-center.dark-gray.hover-animate.glow.bg-light-gray.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.w-100"))
 (def name-cta (new-string "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.elements"))
 (def nav-div (new-string " flex.flex-column.justify-between.vh-100.dark-blue "))

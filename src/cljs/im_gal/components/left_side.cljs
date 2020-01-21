@@ -29,13 +29,9 @@
   [{:name "Synths For Compilers"
      :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
      :tech-used ["reagent" "tachyons" "hiccup"]
-     :app-link "http://www.synthsforcompilers.dev"}
-   {:name "Portfolio"
-     :about "Personal portfolio using Clojurescript and Tachyons."
-     :tech-used ["Clojurescript" "Tachyons" "re-frame"]
-     :link "http://www.lorenzoevans.me"}
+     :app-link "https://www.synthsforcompilers.dev"}
    {:name "Clojurena"
-    :about "A library that acts as a wrapper over the are.na API"
+    :about "A library that acts as a wrapper over the are.na API."
     :tech-used ["Clojure"]
     :link "https://github.com/LorenzoEvans/clojurena"}
    {:name "RateMyDIY"
@@ -44,7 +40,7 @@
     :docs "https://ratemydiy.github.io/Documentation/Architecture.html"
     :app-link "http://ratemydiy.tk"}
    {:name "Personote"
-    :about  "Desktop note-taking application in Clojure, CLJFX/OpenJFX, JDBC/SQL."
+    :about  "Desktop note-taking application in Clojure, CLJFX/OpenJFX for GUI programming, JDBC/SQL for persistence."
     :tech-used ["Clojure" "CLJFX/OpenJFX" "JDBC/SQL"]
     :app-link "https://github.com/LorenzoEvans/duly-noted"}])
     
@@ -79,11 +75,12 @@
         ^{:key (:name project)}
         [:div {:class project-container} (:name project)
           [:div {:class project-content} (:about project)]
-          [:a.tracked-ns.no-underline {:class project-link 
+          [:a {:class project-link 
                                        :href (:app-link project)} "Link to project"]
           (cond (not= (:docs project) nil)[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
                                                :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
           [:div.tracked-ns.tc "Tech Used"
            (for [item (:tech-used project)] 
             [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])]])
+            
       
