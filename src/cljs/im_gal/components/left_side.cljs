@@ -28,7 +28,7 @@
 (def projects 
   [{:name "Synths For Compilers"
      :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
-     :tech-used ["reagent" "tachyons" "hiccup"]
+     :tech-used ["reagent" "tachyons" "hiccup" "HugSQL"]
      :app-link "https://www.synthsforcompilers.dev"
      :repo "https://github.com/LorenzoEvans/m-s"}
    {:name "Clojurena"
