@@ -8,7 +8,6 @@
    [goog.dom :as dom]
    [goog.events :as events]
    [goog.events.EventType :as EventType]
-   [reanimated.core :as anim]
    [clojure.string :as str]))
 
 (defn home []

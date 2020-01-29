@@ -1,4 +1,4 @@
-(ns im-gal.handler
+/(ns im-gal.handler
   (:require
    [compojure.core :refer [GET defroutes]]
    [compojure.route :refer [resources]]

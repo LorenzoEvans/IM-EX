@@ -22,7 +22,7 @@
   (clojure.string/replace x "." " "))
 
 (def project-link (new-string "f3.no-shadow.self-center.dark-gray.glow.bg-washed-blue.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3"))
-(def expr-bullet (new-string "f3.no-shadow.self-center.dark-gray.hover-animate.glow.bg-light-gray.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.w-100"))
+(def expr-bullet (new-string "f3.no-shadow.self-center.dark-gray.glow.bg-light-gray.br1.pa3.hover-dark-pink.ba.bw2.b--near-black.ma3.w-100"))
 (def name-cta (new-string "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.elements"))
 (def nav-div (new-string " flex.flex-column.justify-between.vh-100.dark-blue "))
 (def nav-div-2 (new-string "avenir.f2.f-sub-headline.lh-title.db.bg-washed-gray"))
@@ -31,7 +31,7 @@
 (def nav-h33331 (new-string "fw6.f-headline.tc.near-black"))
 (def project-container (new-string "flex.flex-column.w-100.border-box.f1.fw5.ba.bw2.b--near-black.white.h-75.ma4.bg-black-40.bw2.no-shadow.pa2"))
 (def project-content (new-string "ba.bw3.b--washed-green.pa2.f2.tracked-tight.lh-copy"))
-(def nav-span (new-string "mt3.w-60-m.bw2.w-75.hover-animate.glow.f-subheadline.f2-m.pa1.avenir.fw6.near-black.bg-near-white.hover-dark-gray.hover-bg-animated.hover-bg-washed-red.glow.bounceInElement"))
+(def nav-span (new-string "mt3.w-60-m.bw2.w-75.glow.f-subheadline.f2-m.pa1.avenir.fw6.near-black.bg-near-white.bounceInElement"))
 (def contact-anchor (new-string "mt3.w-60-m.bw2.w-75.hover-animate.glow.f-subheadline.f2-m.pa1.avenir.fw6.near-black.bg-near-white.hover-bg-animated"))
 (def nav-span-2 (new-string "mt3.w-60-m.bw2.w-75.hover-animate.3glow.f2.f2-m.pa1.avenir.fw6.near-black.bg-near-white.grow.hover-dark-gray.hover-bg-animated.hover-bg-gray.glow.bounceInElement"))
 (def doc-span (new-string "no-underline.mt3.w-60-m.bw2.w-75.bb.glow.f2.f2-m.pa1.avenir.fw6.washed-green.grow.glow"))
