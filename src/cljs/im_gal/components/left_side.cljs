@@ -57,18 +57,14 @@
                "Received 2.87 / 3 rating as a Team Lead."
                "Piloted new school-wide video feed-back program, via retrospectives covering student/TL experience with program."
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
-; change nav, make them links or somethings
-
-
 
 (defn skills-component []
   (fn []
-   [:div {:class content-container}
-    [:section {:class skills-content-area} "Skills"]
-    [:div {:class skills-container}
-     (for [item skills]
-      ^{:key item}
-      [:span {:class skill-style} item])]])) 
+    [:section {:class skills-content-area} 
+     [:div {:class skills-container} "Skills"
+      (for [item skills]
+       ^{:key item}
+       [:span {:class skill-style} item])]])) 
       
 (defn experience-component []
   (fn []
@@ -92,34 +88,12 @@
      [:a {:class project-link
           :href (:app-link project)} "Link To Project"]
      (cond 
-      (some? (:docs project)) [:a {:class project-link :href (:docs project)} "Documentation"] nil)
-     [:div.tracked-ns.tc.flex.flex-row "Technology Used"
-      (for [item (:tech-used project)]
-       [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]])]))
+      (some? (:docs project)) [:a {:class project-link :href (:docs project)} "Documentation"] nil
+      [:div.tracked-ns.tc.flex.flex-row "Technology Used"
+       (for [item (:tech-used project)]
+        [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])])])]))
 
 (defn content-side []
   (fn []
-   [:div {:class content-container}]
-   [skills-component]
-   [experience-component]
-   [project-component]))
-
-
-; (defn content-side []
-;    [:section {:class project-content-area} "Projects"
-;     (for [project projects]
-;      [:div {:class f-row-wrap}
-;         ^{:key (:name project)}
-;         [:div {:class project-container} (:name project)
-;           [:div {:class project-content} (:about project)]
-;           [:a {:class project-link 
-;                                        :href (:app-link project)} "Link to project"]
-;           (cond (some? (:docs project))[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
-;                                                :href (:docs project)} "Documentation"]
-;                                        nil)
-;           [:a {:class project-link :href (:repo project)} "Repo"]                                    
-;           [:div.tracked-ns.tc.flex.flex-row "Tech Used"
-;            (for [item (:tech-used project)] 
-;             [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])])
-            
-      
+   [:div {:class content-container}
+    [skills-component]]))
