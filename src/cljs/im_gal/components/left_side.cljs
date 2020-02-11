@@ -57,7 +57,10 @@
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 ; change nav, make them links or somethings
 
-(defn skills []
+(defn container-component []
+  [:div {:class content-container}])
+
+(defn skills-component []
   [:div {:class content-container}
    [:section {:class skills-content-area} "Skills"
     [:div {:class skills-container}
@@ -65,7 +68,18 @@
       ^{:key item}
       [:span {:class skill-style} item])]]]) 
       
+(defn experience-component []
+  [:section {:class skills-content-area}
+   [:div.no-shadow.ma2.mt3.flex.flex-column
+    (for [expr experience]
+      [:<>
+       [:span.f3 (:title expr)]
+       [:div.w-75.h-100 {:class experience-container}
+        (for [bullet (expr :job-desc)]
+          [:div {:class expr-bullet} bullet])]])]])
 
+(defn experience-component []
+  [:div {}])
 (defn content-side []
   [:div {:class content-container}
    [:section {:class skills-content-area}  "Skills"
