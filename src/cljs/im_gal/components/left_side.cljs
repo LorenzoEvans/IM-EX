@@ -72,7 +72,7 @@
     [:div
      (for [expr experience]
        [:div.flex.flex-column.justify-center
-        [:span.f3.tc (:title expr)]
+        [:span.f2.tc.mt3 (:title expr)]
         (for [bullet (expr :job-desc)]
          [:div {:class expr-bullet} bullet])])]]))
 
@@ -80,7 +80,7 @@
  (fn []
   [:section {:class project-content-area} "Projects"
    (for [project projects]
-    [:div {:class f-row-wrap}
+    [:div 
      ^{:key (:name project)}
      [:div {:class project-container} (:name project)]
      [:div {:class project-content} (:about project)]
@@ -96,4 +96,5 @@
   (fn []
    [:div {:class content-container}
     [skills-component]
-    [experience-component]]))
+    [experience-component]
+    [project-component]]))
