@@ -62,24 +62,27 @@
 
 
 (defn skills-component []
-  [:div {:class content-container}
-   [:section {:class skills-content-area} "Skills"
+  (fn []
+   [:div {:class content-container}
+    [:section {:class skills-content-area} "Skills"]
     [:div {:class skills-container}
      (for [item skills]
       ^{:key item}
-      [:span {:class skill-style} item])]]]) 
+      [:span {:class skill-style} item])]])) 
       
 (defn experience-component []
-  [:section {:class skills-content-area} "Experience"
-   [:div.no-shadow.ma2.mt3.flex.flex-column
-    (for [expr experience]
+  (fn []
+   [:section {:class skills-content-area} "Experience"
+    [:div.no-shadow.ma2.mt3.flex.flex-column
+     (for [expr experience]
       [:<>
        [:span.f3 (:title expr)]
        [:div.w-75.h-100 {:class experience-container}
         (for [bullet (expr :job-desc)]
-          [:div {:class expr-bullet} bullet])]])]])
+          [:div {:class expr-bullet} bullet])]])]]))
 
 (defn project-component []
+ (fn []
   [:section {:class project-content-area} "Projects"
    (for [project projects]
     [:div {:class f-row-wrap}
@@ -88,20 +91,35 @@
      [:div {:class project-content} (:about project)]
      [:a {:class project-link
           :href (:app-link project)} "Link To Project"]
-     (cond (some? (:docs project))
-      [:a {:class project-link :href (:docs project)} "Documentation"]
-      nil)
+     (cond 
+      (some? (:docs project)) [:a {:class project-link :href (:docs project)} "Documentation"] nil)
      [:div.tracked-ns.tc.flex.flex-row "Technology Used"
       (for [item (:tech-used project)]
-       [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]])])
-
-(defn container-component []
-  [:div {:class content-container}
-   [skills-component]
-   [experience-component]
-   [project-component]])
+       [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]])]))
 
 (defn content-side []
-  [container-component])
+  (fn []
+   [:div {:class content-container}]
+   [skills-component]
+   [experience-component]
+   [project-component]))
 
+
+; (defn content-side []
+;    [:section {:class project-content-area} "Projects"
+;     (for [project projects]
+;      [:div {:class f-row-wrap}
+;         ^{:key (:name project)}
+;         [:div {:class project-container} (:name project)
+;           [:div {:class project-content} (:about project)]
+;           [:a {:class project-link 
+;                                        :href (:app-link project)} "Link to project"]
+;           (cond (some? (:docs project))[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
+;                                                :href (:docs project)} "Documentation"]
+;                                        nil)
+;           [:a {:class project-link :href (:repo project)} "Repo"]                                    
+;           [:div.tracked-ns.tc.flex.flex-row "Tech Used"
+;            (for [item (:tech-used project)] 
+;             [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])])
+            
       
