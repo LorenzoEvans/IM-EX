@@ -56,6 +56,16 @@
                "Piloted new school-wide video feed-back program, via retrospectives covering student/TL experience with program."
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 ; change nav, make them links or somethings
+
+(defn skills []
+  [:div {:class content-container}
+   [:section {:class skills-content-area} "Skills"
+    [:div {:class skills-container}
+     (for [item skills]
+      ^{:key item}
+      [:span {:class skill-style} item])]]]) 
+      
+
 (defn content-side []
   [:div {:class content-container}
    [:section {:class skills-content-area}  "Skills"
@@ -65,7 +75,7 @@
        [:span {:class skill-style} item])]]
    [:section {:class experience-content-area} "Experience"
     (for [expr experience] 
-      [:div.no-shadow.ma2.mt3.flex.flex-column {:class project-content}
+      [:div.no-shadow.ma2.mt3.flex.flex-column
        [:<> 
         [:span.f3 (:title expr)]
         [:div.w-75.h-100 {:class experience-container}
@@ -82,7 +92,7 @@
           (cond (not= (:docs project) nil)[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
                                                :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
           [:a {:class project-link :href (:repo project)} "Repo"]                                    
-          [:div.tracked-ns.tc "Tech Used"
+          [:div.tracked-ns.tc.flex.flex-row "Tech Used"
            (for [item (:tech-used project)] 
             [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])]])
             
