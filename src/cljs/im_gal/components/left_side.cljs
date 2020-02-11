@@ -34,7 +34,9 @@
    {:name "Clojurena"
     :about "A library that acts as a wrapper over the are.na API."
     :tech-used ["Clojure"]
-    :link "https://github.com/LorenzoEvans/clojurena"}
+    :docs "https://0xledev.gitbook.io/clojurena/"
+    :app-link "https://clojars.org/clojurena"
+    :repo "https://github.com/LorenzoEvans/clojurena"}
    {:name "RateMyDIY"
     :about "RateMyDiy targets people who want to get up and get productive and learn different skills. It utilizes a rating system to analyze the most effective and enjoyed projects, project makers, and reviewers. This will allow the projects and user generated content that is most beneficial to the community to be the most available to people who are looking for high quality information."
     :tech-used ["Firebase" "GraphQL/Apollo" "Prisma" "Sendgrid" "Stripe" "Cloudinary" "React" "SASS"]
@@ -44,7 +46,7 @@
    {:name "Personote"
     :about  "Desktop note-taking application in Clojure, CLJFX/OpenJFX for GUI programming, JDBC/SQL for persistence."
     :tech-used ["Clojure" "CLJFX/OpenJFX" "JDBC/SQL"]
-    :app-link "https://github.com/LorenzoEvans/duly-noted"}])
+    :repo "https://github.com/LorenzoEvans/duly-noted"}])
     
 ; Experience map
 
@@ -57,8 +59,7 @@
                "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
 ; change nav, make them links or somethings
 
-(defn container-component []
-  [:div {:class content-container}])
+
 
 (defn skills-component []
   [:div {:class content-container}
@@ -69,7 +70,7 @@
       [:span {:class skill-style} item])]]]) 
       
 (defn experience-component []
-  [:section {:class skills-content-area}
+  [:section {:class skills-content-area} "Experience"
    [:div.no-shadow.ma2.mt3.flex.flex-column
     (for [expr experience]
       [:<>
@@ -78,36 +79,29 @@
         (for [bullet (expr :job-desc)]
           [:div {:class expr-bullet} bullet])]])]])
 
-(defn experience-component []
-  [:div {}])
-(defn content-side []
+(defn project-component []
+  [:section {:class project-content-area} "Projects"
+   (for [project projects]
+    [:div {:class f-row-wrap}
+     ^{:key (:name project)}
+     [:div {:class project-container} (:name project)]
+     [:div {:class project-content} (:about project)]
+     [:a {:class project-link
+          :href (:app-link project)} "Link To Project"]
+     (cond (some? (:docs project))
+      [:a {:class project-link :href (:docs project)} "Documentation"]
+      nil)
+     [:div.tracked-ns.tc.flex.flex-row "Technology Used"
+      (for [item (:tech-used project)]
+       [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]])])
+
+(defn container-component []
   [:div {:class content-container}
-   [:section {:class skills-content-area}  "Skills"
-    [:div {:class skills-container}
-     (for [item skills]
-       ^{:key item}
-       [:span {:class skill-style} item])]]
-   [:section {:class experience-content-area} "Experience"
-    (for [expr experience] 
-      [:div.no-shadow.ma2.mt3.flex.flex-column
-       [:<> 
-        [:span.f3 (:title expr)]
-        [:div.w-75.h-100 {:class experience-container}
-         (for [bullet (expr :job-desc)]
-          [:div {:class expr-bullet} bullet])]]])]
-   [:section {:class project-content-area} "Projects"
-    (for [project projects]
-     [:div {:class f-row-wrap}
-        ^{:key (:name project)}
-        [:div {:class project-container} (:name project)
-          [:div {:class project-content} (:about project)]
-          [:a {:class project-link 
-                                       :href (:app-link project)} "Link to project"]
-          (cond (not= (:docs project) nil)[:a {:class project-link ; NOTE TO SELF CHANGE THIS CONDITIONAL WHEN YOU ADD MORE DOCUMENTATIONS
-                                               :href "https://ratemydiy.github.io/Documentation/Architecture.html"} "Documentation"])
-          [:a {:class project-link :href (:repo project)} "Repo"]                                    
-          [:div.tracked-ns.tc.flex.flex-row "Tech Used"
-           (for [item (:tech-used project)] 
-            [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])]]])]])
-            
+   [skills-component]
+   [experience-component]
+   [project-component]])
+
+(defn content-side []
+  [container-component])
+
       
