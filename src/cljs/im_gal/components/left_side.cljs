@@ -60,22 +60,21 @@
 
 (defn skills-component []
   (fn []
-    [:section {:class skills-content-area} 
-     [:div {:class skills-container} "Skills"
+    [:section.tc {:class skills-content-area} "Skills"
+     [:div {:class skills-container}
       (for [item skills]
        ^{:key item}
        [:span {:class skill-style} item])]])) 
       
 (defn experience-component []
   (fn []
-   [:section {:class skills-content-area} "Experience"
-    [:div.no-shadow.ma2.mt3.flex.flex-column
+   [:section.tc {:class skills-content-area} "Experience"
+    [:div
      (for [expr experience]
-      [:<>
-       [:span.f3 (:title expr)]
-       [:div.w-75.h-100 {:class experience-container}
+       [:div.flex.flex-column.justify-center
+        [:span.f3.tc (:title expr)]
         (for [bullet (expr :job-desc)]
-          [:div {:class expr-bullet} bullet])]])]]))
+         [:div {:class expr-bullet} bullet])])]]))
 
 (defn project-component []
  (fn []
@@ -96,4 +95,5 @@
 (defn content-side []
   (fn []
    [:div {:class content-container}
-    [skills-component]]))
+    [skills-component]
+    [experience-component]]))
