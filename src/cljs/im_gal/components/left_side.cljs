@@ -57,7 +57,13 @@
     :job-desc ["Supported 5-9 students in learning, meeting MVP in various frameworks, across all levels of the stack, using agile methods."
                "Received 2.87 / 3 rating as a Team Lead."
                "Piloted new school-wide video feed-back program, via retrospectives covering student/TL experience with program."
-               "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}])
+               "Took part in daily stand ups, code reviews, on-on-ones, and help desks with Section Leads, fellow TL’s and students."]}
+   {:title "Team Lead (Careers)"
+    :duration "Dec 2019 - Feb 2020"
+    :job-desc ["Supported 5-9 students in advancing their technical abilities, polishing their portfolio, and their resume."
+               "Provide students with internal and external resources for technical assessment tests, and interviews."
+               "Attend daily technical/development review lectures with students."
+               "Be available to trouble-shoot bugs with developer portfolio applications, from styling to deployment, etc."]}])
 
 (defn skills-component []
   (fn []
