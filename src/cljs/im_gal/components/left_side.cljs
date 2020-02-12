@@ -70,9 +70,9 @@
 (defn experience-component []
   (fn []
    [:section.tc {:class skills-content-area} "Experience"
-    [:div
+    [:div.content-center.items-center.self-center.h-100
      (for [expr experience]
-       [:div.flex.flex-column.justify-center
+       [:div.flex.flex-column.justify-between.h-100
         [:span.f2.tc.mt1 (:title expr)]
         (for [bullet (expr :job-desc)]
          [:div {:class expr-bullet} bullet])])]]))
@@ -90,6 +90,7 @@
            :href (:app-link project)} "Link To Project"]
       (if (not= (:docs project) nil)
        [:a.no-underline.near-black.hover-light-gray.hover-animate {:class project-link :href (:docs project)} "Documentation"] nil)
+      [:a {:href (:repo project) :class project-link} "GitHub Repo"]
       [:div.bt.bw2.w-100.pt2 "Technology Used"
        [:div.tc.flex.flex-row.flex-wrap
         (for [item (:tech-used project)]

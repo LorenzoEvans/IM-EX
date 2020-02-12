@@ -14,9 +14,9 @@
     [:nav.vh-100.w-100 {:class nav-nav}
      [:div.flex.flex-column.justify-between.h-75.mt3.items-center.relative
       [:div {:class my-name} "Lorenzo Evans"]
-      [:div.o-70 {:class nav-span} "Programmer."]
-      [:div.o-70 {:class nav-span} "Creative."]
-      [:div.o-70 {:class nav-span} "Writer."]
+      [:div.o-70 {:class nav-span} "(Functional) Programmer."]
+      [:div.o-70 {:class nav-span :href "https://www.synthsforcompilers.dev/"} "Creative."]
+      [:a.o-70.no-underline {:class nav-span :href "https://www.synthsforcompilers.dev/#/how-fp"} "Writer."]
       [:a {:class contact-anchor :href "mailto:lorenzo.evans94@gmail.com"} "Email"]
       [:a {:class contact-anchor :href "https://github.com/LorenzoEvans/"} "Github"]
       [:a {:class contact-anchor :href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]]]]])
