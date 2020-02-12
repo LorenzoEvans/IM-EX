@@ -29,7 +29,7 @@
 (def projects 
   [{:name "Synths For Compilers"
      :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
-     :tech-used ["reagent" "tachyons" "hiccup" "HugSQL"]
+     :tech-used ["reagent" "tachyons" "hiccup" "SQL"]
      :app-link "https://www.synthsforcompilers.dev"
      :repo "https://github.com/LorenzoEvans/m-s"}
    {:name "Clojurena"
@@ -90,11 +90,11 @@
            :href (:app-link project)} "Link To Project"]
       (if (not= (:docs project) nil)
        [:a.no-underline.near-black.hover-light-gray.hover-animate {:class project-link :href (:docs project)} "Documentation"] nil)
-      [:div.bt.bw2.w-100 "Technology Used"
+      [:div.bt.bw2.w-100.pt2 "Technology Used"
        [:div.tc.flex.flex-row.flex-wrap
         (for [item (:tech-used project)]
-         [:div
-          [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate.f3 item]])]]])]]))
+         [:div.ma2.ba
+          [:div.hover-near-black.grow.glow.hover-bg-moon-gray.hover-animate.f3.pa2.cursor item]])]]])]]))
 
 (defn content-side []
   (fn []
