@@ -3,7 +3,8 @@
                                    project-content nav-span doc-span name-cta
                                    skill-style project-content-area experience-content-area
                                    skills-content-area f-row-wrap content-container
-                                   skills-container expr-bullet experience-container]]))
+                                   skills-container expr-bullet experience-container
+                                   project-title project-about]]))
 (def skills 
   ["Javascript"
    "React"
@@ -72,25 +73,28 @@
     [:div
      (for [expr experience]
        [:div.flex.flex-column.justify-center
-        [:span.f2.tc.mt3 (:title expr)]
+        [:span.f2.tc.mt1 (:title expr)]
         (for [bullet (expr :job-desc)]
          [:div {:class expr-bullet} bullet])])]]))
 
 (defn project-component []
  (fn []
-  [:section {:class project-content-area} "Projects"
-   (for [project projects]
-    [:div 
-     ^{:key (:name project)}
-     [:div {:class project-container} (:name project)]
-     [:div {:class project-content} (:about project)]
-     [:a {:class project-link
-          :href (:app-link project)} "Link To Project"]
-     (cond 
-      (some? (:docs project)) [:a {:class project-link :href (:docs project)} "Documentation"] nil
-      [:div.tracked-ns.tc.flex.flex-row "Technology Used"
-       (for [item (:tech-used project)]
-        [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate item])])])]))
+  [:div
+   [:section.tc {:class project-content-area} "Projects"
+    (for [project projects]
+     [:div.self-center.items-center.content-center.ba.bw3 {:class project-container}
+      ^{:key (:name project)}
+      [:div {:class project-title} (:name project)
+       [:div {:class project-about} (:about project)]]
+      [:a {:class project-link
+           :href (:app-link project)} "Link To Project"]
+      (if (not= (:docs project) nil)
+       [:a.no-underline.near-black.hover-light-gray.hover-animate {:class project-link :href (:docs project)} "Documentation"] nil)
+      [:div.bt.bw2.w-100 "Technology Used"
+       [:div.tc.flex.flex-row.flex-wrap
+        (for [item (:tech-used project)]
+         [:div
+          [:div.hover-washed-blue.hover-bg-moon-gray.hover-animate.f3 item]])]]])]]))
 
 (defn content-side []
   (fn []
