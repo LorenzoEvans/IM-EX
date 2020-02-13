@@ -18,5 +18,5 @@
       [:div.o-70 {:class nav-span :href "https://www.synthsforcompilers.dev/"} "Creative."]
       [:a.o-70.no-underline {:class nav-span :href "https://www.synthsforcompilers.dev/#/how-fp"} "Writer."]
       [:a {:class contact-anchor :href "mailto:lorenzo.evans94@gmail.com"} "Email"]
-      [:a {:class contact-anchor :href "https://github.com/LorenzoEvans/"} "Github"]
+      [:a {:class contact-anchor :href "https://github.com/LorenzoEvans/"} "GitHub"]
       [:a {:class contact-anchor :href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]]]]])

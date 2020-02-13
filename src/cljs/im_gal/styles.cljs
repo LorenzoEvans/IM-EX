@@ -47,7 +47,7 @@
 (def content-container (new-string "h-100.avenir.overflow-scroll.z-3.w-60.b--near-black.ma1"))
 
 (def f-row-wrap (new-string "flex.flex-row"))
-(def my-name (new-string "bw3.f-headline.near-black.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw5.element"))
+(def my-name (new-string "bw3.f-headline.near-black.grow.glow.hover-animate.o-80.w-90.hover-washed-red.ba.w-90-m.f1-m.fw6.element.pa1"))
 (def name-cta (new-string "mt3.bw3.f-headline.light-green.grow.glow.hover-animate.o-80.w-80.hover-washed-red.ba.w-90-m.f1-m.fw6.elements"))
 (def contact-anchor (new-string "mt3.w-60-m.bw2.w-75.hover-animate.glow.f-subheadline.f2-m.pa1.avenir.fw6.near-black.bg-near-white.hover-bg-animated"))
 (def doc-span (new-string "no-underline.mt3.w-60-m.bw2.w-75.bb.glow.f2.f2-m.pa1.avenir.fw6.washed-green.grow.glow"))
