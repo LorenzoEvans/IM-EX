@@ -38,7 +38,7 @@
 (def project-content-area (new-string "f-subheadline.fw6.bw2.dark-gray.h-75.bw2.w-100.flex.flex-column.bb.mt3"))
 (def project-title (new-string "near-white.ma1"))
 (def project-about (new-string "fw3.f2.ma1.lh-copy"))
-(def skills-content-area (new-string "f-subheadline.fw6.bw2.dark-gray.h-75.bw2.w-100.flex.flex-column.bb"))
+(def skills-content-area (new-string "f-subheadline.fw6.bw2.dark-gray.bw2.w-100.flex.flex-column.bb"))
 (def skill-style (new-string "f2.no-shadow.self-center.dark-gray.hover-animate.glow.bg-washed-blue.br1.pa2.hover-dark-pink.ba.bw2.b--near-black.ma2.f4-m.ma1-m.justify-between-m"))
 (def skills-container (new-string "w-100.flex.flex-row.flex-wrap.justify-evenly.no-shadow.h-75.w-80-m"))
 

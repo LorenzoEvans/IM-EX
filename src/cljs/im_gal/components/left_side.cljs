@@ -21,6 +21,7 @@
    "FP"
    "OOP"
    "Git"
+   "SQL"
    "Clojure/Script"
    "Java/JVM"])
 
