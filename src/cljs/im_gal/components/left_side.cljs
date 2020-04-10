@@ -44,10 +44,11 @@
     :docs "https://ratemydiy.github.io/Documentation/Architecture.html"
     :app-link "http://ratemydiy.tk"
     :repo "https://github.com/Lambda-School-Labs/labspt2-rate-my-diy"}
-   {:name "Personote"
-    :about  "Desktop note-taking application in Clojure, CLJFX/OpenJFX for GUI programming, JDBC/SQL for persistence."
-    :tech-used ["Clojure" "CLJFX/OpenJFX" "JDBC/SQL"]
-    :repo "https://github.com/LorenzoEvans/duly-noted"}])
+   {:name "Lambda Notes API"
+    :about "Lambda Notes API is a backend API for a note taking web-application, deployed with data persistence."
+    :tech-used ["JavaScript" "Node" "Express" "SQL"]
+    :repo "https://github.com/LorenzoEvans/back-end-project-week"}])
+   
     
 ; Experience map
 
