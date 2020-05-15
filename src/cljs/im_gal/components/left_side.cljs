@@ -6,7 +6,8 @@
                                    skills-container expr-bullet experience-container
                                    project-title project-about]]))
 (def skills 
-  ["Javascript"
+  [
+   "Javascript"
    "React"
    "Clojure/Script"
    "Node/Express"
@@ -69,7 +70,8 @@
 (defn skills-component []
   (fn []
     [:section.tc {:class skills-content-area} "Skills"
-     [:div {:class skills-container}
+    [:div {:class skills-container}
+      [:a.no-underline.f1 {:class skill-style :href "https://www.youracclaim.com/badges/4582280c-e647-4665-b2f3-d34d9a83833b/public_url"} "AWS"]
       (for [item skills]
        ^{:key item}
        [:span {:class skill-style} item])]])) 
