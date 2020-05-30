@@ -12,6 +12,8 @@
    "Clojure/Script"
    "Node/Express"
    "CSS, variants"
+  "Data Engineering"
+  "Systems",
    "Agile"
    "RDBMS"
    "Testing"
@@ -28,9 +30,14 @@
 ; Projects map
 
 (def projects 
-  [{:name "Synths For Compilers"
-     :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm/as a Clojurist/Lisp hacker."
-     :tech-used ["reagent" "tachyons" "hiccup"]
+  [ {:name "Kaiser Insurance Group"
+     :about "Freelance project done for an associate, who needed a quick landing page for an insurance company they're starting."
+     :tech-used ["React" "Node/Express" "UI-Kit" "AWS (SES, IAM)"]
+     :app-link "https://www.mykaisergroup.com/",
+     :repo "Unfortunately, I can't link to it, as the code is proprietary."}
+    {:name "Synths For Compilers"
+     :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm, cloud-computing, systems, etc."
+     :tech-used ["Orchid (Static Site Generator)"]
      :app-link "https://www.synthsforcompilers.dev"
      :repo "https://github.com/LorenzoEvans/m-s"}
    {:name "Clojurena"
@@ -48,7 +55,11 @@
    {:name "Lambda Notes API"
     :about "Lambda Notes API is a backend API for a note taking web-application, deployed with data persistence."
     :tech-used ["JavaScript" "Node" "Express" "SQL"]
-    :repo "https://github.com/LorenzoEvans/back-end-project-week"}])
+    :repo "https://github.com/LorenzoEvans/back-end-project-week"}
+    {:name "Dungeon Game"
+    :about "A CLI text adventure game written in python (working on deployment/persistence)."
+    :repo "https://github.com/LorenzoEvans/Intro-Python-II/tree/web-app"
+    :tech-used ["Python", "SQLAlchemy", "GraphQL"]}])
    
     
 ; Experience map
