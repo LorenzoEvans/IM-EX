@@ -30,36 +30,43 @@
 ; Projects map
 
 (def projects 
-  [ {:name "Kaiser Insurance Group"
-     :about "Freelance project done for an associate, who needed a quick landing page for an insurance company they're starting."
-     :tech-used ["React" "Node/Express" "UI-Kit" "AWS (SES, IAM)"]
-     :app-link "https://www.mykaisergroup.com/",
-     :repo "Unfortunately, I can't link to it, as the code is proprietary."}
+  [ 
+    {:name "Kaiser Insurance Group"
+    :about "Freelance project done for an associate, who needed a quick landing page for an insurance company they're starting."
+    :tech-used ["React" "Node/Express" "UI-Kit" "Zoho" "Tachyons" "CSS"]
+    :app-link "https://www.mykaisergroup.com/",
+    :repo "Unfortunately, I can't link to it, as the code is proprietary."}
     {:name "Synths For Compilers"
-     :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm, cloud-computing, systems, etc."
-     :tech-used ["Orchid (Static Site Generator)"]
-     :app-link "https://www.synthsforcompilers.dev"
-     :repo "https://github.com/LorenzoEvans/m-s"}
-   {:name "Clojurena"
+    :about "Personal micro-blog for tech-related/miscellaneous things I find interesting, and chronicling my experience and growth with the FP paradigm, cloud-computing, systems, etc."
+    :tech-used ["Orchid (Static Site Generator)"]
+    :app-link "https://www.synthsforcompilers.dev"
+    :repo "https://github.com/LorenzoEvans/m-s"}
+    {:name "Rust2Webtris"
+    :about "Completing Nand2Tetris in Rust, with the intent to deploy it on the web"
+    :tech-used ["Rust", "Actix Web"]
+    :app-link nil
+    :repo "https://github.com/LorenzoEvans/N2T"}
+    {:name "Clojurena"
     :about "A library that acts as a wrapper over the are.na API."
     :tech-used ["Clojure"]
     :docs "https://0xledev.gitbook.io/clojurena/"
     :app-link "https://clojars.org/clojurena"
     :repo "https://github.com/LorenzoEvans/clojurena"}
-   {:name "RateMyDIY"
+    {:name "Dungeon Game"
+    :about "A CLI text adventure game written in python (working on deployment/persistence)."
+    :repo "https://github.com/LorenzoEvans/Intro-Python-II/tree/web-app"
+    :tech-used ["Python", "SQLAlchemy", "GraphQL"]}
+    {:name "Lambda Notes API"
+    :about "Lambda Notes API is a backend API for a note taking web-application, deployed with data persistence."
+    :tech-used ["JavaScript" "Node" "Express" "SQL"]
+    :repo "https://github.com/LorenzoEvans/back-end-project-week"}
+    {:name "RateMyDIY"
     :about "RateMyDiy targets people who want to get up and get productive and learn different skills. It utilizes a rating system to analyze the most effective and enjoyed projects, project makers, and reviewers. This will allow the projects and user generated content that is most beneficial to the community to be the most available to people who are looking for high quality information."
     :tech-used ["Firebase" "GraphQL/Apollo" "Prisma" "Sendgrid" "Stripe" "Cloudinary" "React" "SASS"]
     :docs "https://ratemydiy.github.io/Documentation/Architecture.html"
     :app-link "http://ratemydiy.tk"
     :repo "https://github.com/Lambda-School-Labs/labspt2-rate-my-diy"}
-   {:name "Lambda Notes API"
-    :about "Lambda Notes API is a backend API for a note taking web-application, deployed with data persistence."
-    :tech-used ["JavaScript" "Node" "Express" "SQL"]
-    :repo "https://github.com/LorenzoEvans/back-end-project-week"}
-    {:name "Dungeon Game"
-    :about "A CLI text adventure game written in python (working on deployment/persistence)."
-    :repo "https://github.com/LorenzoEvans/Intro-Python-II/tree/web-app"
-    :tech-used ["Python", "SQLAlchemy", "GraphQL"]}])
+    ])
    
     
 ; Experience map
@@ -106,8 +113,8 @@
       ^{:key (:name project)}
       [:div {:class project-title} (:name project)
        [:div {:class project-about} (:about project)]]
-      [:a {:class project-link
-           :href (:app-link project)} "Link To Project"]
+      (if (not= (:app-link project) nil)[:a {:class project-link
+           :href (:app-link project)} "Link To Project"] nil)
       (if (not= (:docs project) nil)
        [:a.no-underline.near-black.hover-light-gray.hover-animate {:class project-link :href (:docs project)} "Documentation"] nil)
       [:a {:href (:repo project) :class project-link} "GitHub Repo"]

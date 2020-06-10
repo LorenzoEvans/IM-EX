@@ -15,8 +15,10 @@
      [:div.flex.flex-column.justify-between.h-75.mt3.items-center.relative
       [:div {:class my-name} "Lorenzo Evans"]
       [:div.o-70 {:class nav-span} "(Functional) Programmer."]
-      [:div.o-70 {:class nav-span :href "https://www.synthsforcompilers.dev/"} "Creative."]
-      [:a.o-70.no-underline {:class nav-span :href "https://www.synthsforcompilers.dev/#/how-fp"} "Writer."]
-      [:a {:class contact-anchor :href "mailto:lorenzo.evans94@gmail.com"} "Email"]
-      [:a {:class contact-anchor :href "https://github.com/LorenzoEvans/"} "GitHub"]
-      [:a {:class contact-anchor :href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]]]]])
+      [:div.o-70 {:class nav-span :href "#"} "Creative."]
+      [:a.o-70.no-underline {:class nav-span :href "https://www.synthsforcompilers.dev/systems/2020/may/systems-post/"} "Writer."]
+      [:a.o-70.no-underline {:class nav-span :href "https://www.synthsforcompilers.dev/"} "Blog"]
+      [:a.o-70.no-underline {:class nav-span :href "mailto:lorenzo.evans94@gmail.com"} "Email"]
+      [:a.o-70.no-underline {:class nav-span :href "https://www.linkedin.com/in/lorev/"} "LinkedIn"]
+      [:div.o-70.no-underline {:class contact-anchor :href "https://github.com/LorenzoEvans/"} "GitHub"]
+      ]]]])
