@@ -1,7 +1,7 @@
-(ns im-gal.events
+(ns portfolio.events
   (:require
    [re-frame.core :as re-frame]
-   [im-gal.db :as db]
+   [portfolio.db :as db]
    ))
 
 (re-frame/reg-event-db

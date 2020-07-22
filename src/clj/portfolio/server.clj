@@ -1,5 +1,5 @@
-(ns im-gal.server
-  (:require [im-gal.handler :refer [handler]]
+(ns portfolio.server
+  (:require [portfolio.handler :refer [handler]]
             [config.core :refer [env]]
             [ring.adapter.jetty :refer [run-jetty]])
   (:gen-class))

@@ -1,5 +1,5 @@
-(ns im-gal.components.left-side
-  (:require [im-gal.styles :refer [content-area project-container project-link
+(ns portfolio.components.content
+  (:require [portfolio.styles :refer [content-area project-container project-link
                                    project-content nav-span doc-span name-cta
                                    skill-style project-content-area experience-content-area
                                    skills-content-area f-row-wrap content-container
@@ -30,7 +30,10 @@
 ; Projects map
 
 (def projects 
-  [ 
+  [ {:name "Kurogane OS"
+    :about "A small 16-bit operating system based on x86_64 architecture, can be written to bare metal, thumb-drive, or ran in a VM."
+    :tech-used ["Rust"]
+    :repo "https://github.com/LorenzoEvans/kurogane_os"}
     {:name "Kaiser Insurance Group"
     :about "Freelance project done for an associate, who needed a quick landing page for an insurance company they're starting."
     :tech-used ["React" "Node/Express" "UI-Kit" "Zoho" "Tachyons" "CSS"]
@@ -41,15 +44,9 @@
     :tech-used ["Orchid (Static Site Generator)"]
     :app-link "https://www.synthsforcompilers.dev"
     :repo "https://github.com/LorenzoEvans/m-s"}
-    {:name "Rust2Webtris"
-    :about "Completing Nand2Tetris in Rust, with the intent to deploy it on the web"
-    :tech-used ["Rust", "Actix Web"]
-    :app-link nil
-    :repo "https://github.com/LorenzoEvans/N2T"}
     {:name "Clojurena"
     :about "A library that acts as a wrapper over the are.na API."
     :tech-used ["Clojure"]
-    :docs "https://0xledev.gitbook.io/clojurena/"
     :app-link "https://clojars.org/clojurena"
     :repo "https://github.com/LorenzoEvans/clojurena"}
     {:name "Dungeon Game"
@@ -66,6 +63,10 @@
     :docs "https://ratemydiy.github.io/Documentation/Architecture.html"
     :app-link "http://ratemydiy.tk"
     :repo "https://github.com/Lambda-School-Labs/labspt2-rate-my-diy"}
+    {:name "Personote"
+     :about "Minimalist desktop Todo app, written in Clojure, via cljfx, a wrapper for the OpenJFX GUI library."
+     :tech-used ["Clojure", "OpenJFX"]
+     :repo "https://github.com/LorenzoEvans/personote"}
     ])
    
     

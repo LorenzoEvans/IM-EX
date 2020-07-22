@@ -1,4 +1,4 @@
-(ns im-gal.db)
+(ns portfolio.db)
 
 (def default-db
   {:name "re-frame"})

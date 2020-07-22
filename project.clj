@@ -1,4 +1,4 @@
-(defproject im-gal "0.1.0-SNAPSHOT"
+(defproject portfolio "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.520"
                   :exclusions [com.google.javascript/closure-compiler-unshaded
@@ -37,9 +37,9 @@
 
    :uberjar {:source-paths ["env/prod/clj"]
              :omit-source  true
-             :main         im-gal.server
-             :aot          [im-gal.server]
-             :uberjar-name "im-gal.jar"
+             :main         portfolio.server
+             :aot          [portflio.server]
+             :uberjar-name "portfolio.jar"
              :prep-tasks   ["compile" ["prod"]]}})
 
 

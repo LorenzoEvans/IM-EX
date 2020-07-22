@@ -1,4 +1,4 @@
-(ns im-gal.styles
+(ns portfolio.styles
   (:require [herb.core :refer [defglobal]]))
 
 (defglobal global

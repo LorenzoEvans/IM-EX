@@ -1,4 +1,4 @@
-(ns im-gal.subs
+(ns portfolio.subs
   (:require
    [re-frame.core :as re-frame]))
 

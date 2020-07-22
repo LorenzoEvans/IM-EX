@@ -1,9 +1,9 @@
-(ns im-gal.routes
+(ns portfolio.routes
   (:require-macros [secretary.core :refer [defroute]])
   (:require
    [secretary.core :as secretary]
    [re-frame.core :as re-frame]
-   [im-gal.events :as events]
+   [portfolio.events :as events]
    [pushy.core :as pushy]))
 
 (defn hook-routes []

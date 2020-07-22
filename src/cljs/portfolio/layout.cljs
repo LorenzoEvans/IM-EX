@@ -1,9 +1,9 @@
-(ns im-gal.layout
+(ns portfolio.layout
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require
    [cljs.core.async :refer [<! put! chan timeout go-loop]]
-   [im-gal.components.left-side :refer [content-side]]
-   [im-gal.components.nav :refer [nav]]
+   [portfolio.components.content :refer [content-side]]
+   [portfolio.components.nav :refer [nav]]
    [reagent.core :as reagent]
    [goog.dom :as dom]
    [goog.events :as events]

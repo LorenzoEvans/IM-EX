@@ -1,5 +1,5 @@
-(ns im-gal.components.contact
-  (:require [im-gal.styles :refer [link-border nav-anchor]]
+(ns portfolio.components.contact
+  (:require [portfolio.styles :refer [link-border nav-anchor]]
             [herb.core :refer [<class]]))
 (defn contact []
   [:div.bg-near-white.w-100

@@ -1,5 +1,5 @@
-(ns im-gal.components.about
-  (:require [im-gal.styles :refer [link-border nav-anchor]]
+(ns portfolio.components.about
+  (:require [portfolio.styles :refer [link-border nav-anchor]]
             [herb.core :refer [<class]]))
 
 (defn about []

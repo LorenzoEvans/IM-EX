@@ -1,5 +1,5 @@
-(ns im-gal.components.nav
-  (:require [im-gal.styles :refer [nav-div
+(ns portfolio.components.nav
+  (:require [portfolio.styles :refer [nav-div
                                    nav-div-2 nav-nav
                                    nav-h1 nav-span
                                    nav-span-2

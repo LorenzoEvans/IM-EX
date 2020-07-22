@@ -1,12 +1,12 @@
-(ns im-gal.core
+(ns portfolio.core
   (:require
    [reagent.core :as reagent]
    [re-frame.core :as re-frame]
-   [im-gal.events :as events]
+   [portfolio.events :as events]
    [clerk.core :as clerk]
-   [im-gal.routes :as routes]
-   [im-gal.views :as views]
-   [im-gal.config :as config]
+   [portfolio.routes :as routes]
+   [portfolio.views :as views]
+   [portfolio.config :as config]
    ))
 
 

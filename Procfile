@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/im-gal.jar clojure.main -m im-gal.server
+web: java $JVM_OPTS -cp target/portfolio.jar clojure.main -m portfolio.server

@@ -1,10 +1,10 @@
-(ns im-gal.views
+(ns portfolio.views
   (:require
    [re-frame.core :as re-frame]
-   [im-gal.subs :as subs]
-   [im-gal.layout :refer [home]]
-   [im-gal.components.about :refer [about]]
-   [im-gal.components.contact :refer [contact]]
+   [portfolio.subs :as subs]
+   [portfolio.layout :refer [home]]
+   [portfolio.components.about :refer [about]]
+   [portfolio.components.contact :refer [contact]]
    ))
 
 (defn- panels [panel-name]
