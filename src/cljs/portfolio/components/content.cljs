@@ -64,9 +64,9 @@
     :app-link "http://ratemydiy.tk"
     :repo "https://github.com/Lambda-School-Labs/labspt2-rate-my-diy"}
     {:name "Personote"
-     :about "Minimalist desktop Todo app, written in Clojure, via cljfx, a wrapper for the OpenJFX GUI library."
-     :tech-used ["Clojure", "OpenJFX"]
-     :repo "https://github.com/LorenzoEvans/personote"}
+    :about "Minimalist desktop Todo app, written in Clojure, via cljfx, a wrapper for the OpenJFX GUI library."
+    :tech-used ["Clojure", "OpenJFX"]
+    :repo "https://github.com/LorenzoEvans/personote"}
     ])
    
     
