@@ -38,7 +38,7 @@
    :uberjar {:source-paths ["env/prod/clj"]
              :omit-source  true
              :main         portfolio.server
-             :aot          [portflio.server]
+             :aot          [portfolio.server]
              :uberjar-name "portfolio.jar"
              :prep-tasks   ["compile" ["prod"]]}})
 
