@@ -32,8 +32,11 @@
 (def projects 
   [ {:name "Kurogane OS"
     :about "A small 16-bit operating system based on x86_64 architecture, can be written to bare metal, thumb-drive, or ran in a VM."
-    :tech-used ["Rust"]
+    :tech-used ["Rust" "x86_64 Architecture" "QEMU"]
     :repo "https://github.com/LorenzoEvans/kurogane_os"}
+    {:name "Lisp Parser"
+    :about "Decided to try my hand and developing a lisp parser, completed tokenization, now working on Abstract Syntax Tree generation/evaluation."
+    :tech-used ["Rust"]}
     {:name "Kaiser Insurance Group"
     :about "Freelance project done for an associate, who needed a quick landing page for an insurance company they're starting."
     :tech-used ["React" "Node/Express" "UI-Kit" "Zoho" "Tachyons" "CSS"]
@@ -73,7 +76,11 @@
 ; Experience map
 
 (def experience
-  [{:title "Team Lead (Back End)"
+  [ {:title "Team Lead (Computer Science)"
+    :duration "Present"
+    :job-desc ["Assisting 5 - 9 students in learning CS concepts such as recursion, time complexity, data structures, and searching and sorting algorithms, using agile
+    methodologies, such as daily stand-ups, sprints and retrospectives."]}
+    {:title "Team Lead (Back End)"
     :duration "May 2019 - July 2019"
     :job-desc ["Supported 5-9 students in learning, meeting MVP in various frameworks, across all levels of the stack, using agile methods."
                "Received 2.87 / 3 rating as a Team Lead."
